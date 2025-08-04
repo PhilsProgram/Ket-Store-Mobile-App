@@ -2,7 +2,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { StatusBar } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-// import Profile from "../menu/profile";
+import Profile from "../menu/profile";
 import { Link } from "expo-router";
 
 export default function HeaderNav({ title, img }) {
