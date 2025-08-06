@@ -29,6 +29,13 @@ export function deviceScreen () {
     };
 }
 
-
+// A list of device categories based on screen width
+export const deviceCategories = {
+    xsmall: screenWidth < 360,
+    small: screenWidth >= 360 && screenWidth < 480,
+    medium: screenWidth >= 480 && screenWidth < 600,
+    large: screenWidth >= 600 && screenWidth < 900,
+    xlarge: screenWidth >= 900,
+};
 
 

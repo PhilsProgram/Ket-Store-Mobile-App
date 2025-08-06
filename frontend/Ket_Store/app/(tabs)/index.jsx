@@ -10,45 +10,191 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient"; // Use expo-linear-gradient for Expo
 import { HelloWave } from "@/components/HelloWave";
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
+import { deviceScreen, deviceCategories } from "../UI/screenAdjust";
 
 export default function WelcomePage() {
-  return (
-    <LinearGradient
-      colors={["#BDAC47", "#9D2B27"]}
-      style={styles.linearGradient}
-    >
-      <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <View style={styles.innerContainer}>
-          <Text style={styles.contentText}>Welcome to </Text>
-          <Text style={styles.companyName}>
-            KET STORE <HelloWave />
-          </Text>
-          <Text style={styles.addressingInfo}>
-            Before we start, kindly contact the CEO for sign up access pin
-          </Text>
-          <Text style={styles.addressing}>WhatsApp link</Text>
-          <Text style={styles.addressing}>Do you have the pin already?</Text>
-          <TextInput placeholder="Enter pin" style={styles.input} />
+  // Checking the device screens to render the welcome page
+  if (deviceScreen().screenHeight == deviceCategories.xsmall) {
+    return (
+      <LinearGradient
+        colors={["#BDAC47", "#9D2B27"]}
+        style={styles.linearGradient}
+      >
+        <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <View style={styles.innerContainer}>
+            <Text style={styles.contentText}>Welcome to </Text>
+            <Text style={styles.companyName}>
+              KET STORE <HelloWave />
+            </Text>
+            <Text style={styles.addressingInfo}>
+              Before we start, kindly contact the CEO for sign up access pin
+            </Text>
+            <Text style={styles.addressing}>WhatsApp link</Text>
+            <Text style={styles.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={styles.input} />
 
-          <Link href="/signup" asChild>
-            <Pressable style={styles.button}>
-              <Text style={styles.buttonText}>Continue</Text>
-            </Pressable>
-          </Link>
+            <Link href="/signup" asChild>
+              <Pressable style={styles.button}>
+                <Text style={styles.buttonText}>Continue</Text>
+              </Pressable>
+            </Link>
 
-          <Text style={styles.addressing}>
-            Shop the best "Everyday Essentials" at our store and have it
-            delivered intact
-          </Text>
-          <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
-        </View>
-      </ScrollView>
-    </LinearGradient>
-  );
+            <Text style={styles.addressing}>
+              Shop the best "Everyday Essentials" at our store and have it
+              delivered intact
+            </Text>
+            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+          </View>
+        </ScrollView>
+      </LinearGradient>
+    );
+  } else if (deviceScreen().screenHeight == deviceCategories.small) {
+    return (
+      <LinearGradient
+        colors={["#BDAC47", "#9D2B27"]}
+        style={styles.linearGradient}
+      >
+        <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <View style={styles.innerContainer}>
+            <Text style={styles.contentText}>Welcome to </Text>
+            <Text style={styles.companyName}>
+              KET STORE <HelloWave />
+            </Text>
+            <Text style={styles.addressingInfo}>
+              Before we start, kindly contact the CEO for sign up access pin
+            </Text>
+            <Text style={styles.addressing}>WhatsApp link</Text>
+            <Text style={styles.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={styles.input} />
+
+            <Link href="/signup" asChild>
+              <Pressable style={styles.button}>
+                <Text style={styles.buttonText}>Continue</Text>
+              </Pressable>
+            </Link>
+
+            <Text style={styles.addressing}>
+              Shop the best "Everyday Essentials" at our store and have it
+              delivered intact
+            </Text>
+            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+          </View>
+        </ScrollView>
+      </LinearGradient>
+    );
+  } else if (deviceScreen().screenWidth == deviceCategories.medium) {
+    return (
+      <LinearGradient
+        colors={["#BDAC47", "#9D2B27"]}
+        style={styles.linearGradient}
+      >
+        <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <View style={styles.innerContainer}>
+            <Text style={styles.contentText}>Welcome to </Text>
+            <Text style={styles.companyName}>
+              KET STORE <HelloWave />
+            </Text>
+            <Text style={styles.addressingInfo}>
+              Before we start, kindly contact the CEO for sign up access pin
+            </Text>
+            <Text style={styles.addressing}>WhatsApp link</Text>
+            <Text style={styles.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={styles.input} />
+
+            <Link href="/signup" asChild>
+              <Pressable style={styles.button}>
+                <Text style={styles.buttonText}>Continue</Text>
+              </Pressable>
+            </Link>
+
+            <Text style={styles.addressing}>
+              Shop the best "Everyday Essentials" at our store and have it
+              delivered intact
+            </Text>
+            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+          </View>
+        </ScrollView>
+      </LinearGradient>
+    );
+  } else if (deviceScreen().screenWidth == deviceCategories.large) {
+    return (
+      <LinearGradient
+        colors={["#BDAC47", "#9D2B27"]}
+        style={styles.linearGradient}
+      >
+        <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <View style={styles.innerContainer}>
+            <Text style={styles.contentText}>Welcome to </Text>
+            <Text style={styles.companyName}>
+              KET STORE <HelloWave />
+            </Text>
+            <Text style={styles.addressingInfo}>
+              Before we start, kindly contact the CEO for sign up access pin
+            </Text>
+            <Text style={styles.addressing}>WhatsApp link</Text>
+            <Text style={styles.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={styles.input} />
+
+            <Link href="/signup" asChild>
+              <Pressable style={styles.button}>
+                <Text style={styles.buttonText}>Continue</Text>
+              </Pressable>
+            </Link>
+
+            <Text style={styles.addressing}>
+              Shop the best "Everyday Essentials" at our store and have it
+              delivered intact
+            </Text>
+            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+          </View>
+        </ScrollView>
+      </LinearGradient>
+    );
+  } else {
+    return (
+      <LinearGradient
+        colors={["#BDAC47", "#9D2B27"]}
+        style={styles.linearGradient}
+      >
+        <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <View style={styles.innerContainer}>
+            <Text style={styles.contentText}>Welcome to </Text>
+            <Text style={styles.companyName}>
+              KET STORE <HelloWave />
+            </Text>
+            <Text style={styles.addressingInfo}>
+              Before we start, kindly contact the CEO for sign up access pin
+            </Text>
+            <Text style={styles.addressing}>WhatsApp link</Text>
+            <Text style={styles.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={styles.input} />
+
+            <Link href="/signup" asChild>
+              <Pressable style={styles.button}>
+                <Text style={styles.buttonText}>Continue</Text>
+              </Pressable>
+            </Link>
+
+            <Text style={styles.addressing}>
+              Shop the best "Everyday Essentials" at our store and have it
+              delivered intact
+            </Text>
+            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+          </View>
+        </ScrollView>
+      </LinearGradient>
+    );
+  }
 }
-
 const styles = StyleSheet.create({
   linearGradient: {
     flex: 1,

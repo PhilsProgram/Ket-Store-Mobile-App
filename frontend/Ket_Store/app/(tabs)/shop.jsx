@@ -3,11 +3,14 @@ import { View, Text, ScrollView, StyleSheet, Pressable, TouchableOpacity } from 
 import {heightPercentageToDP as hp} from "react-native-responsive-screen";
 import FooterNav from "../navigations/footerNav";
 import HeaderNav from "../navigations/HeaderNav";
+import { deviceScreen, deviceCategories } from "../UI/screenAdjust";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { Link } from "expo-router";
 
 export default function ShopScreen() {
-  return (
+  //  Checking if the device of the screen is very small
+  if ( deviceScreen().screenWidth == deviceCategories.xsmall ) {
+    return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1, bargroundColor: "green" }}>
         <View style={styles.container}>
@@ -23,8 +26,89 @@ export default function ShopScreen() {
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
-  );
-}
+    );
+  }
+
+  else if ( deviceScreen().screenWidth == deviceCategories.small ) {
+    return (
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1, bargroundColor: "green" }}>
+        <View style={styles.container}>
+          {/* Header */}
+          <HeaderNav title="Shop" img="shopping-bag" />
+          {/* Scrollable Content */}
+          <ScrollView contentContainerStyle={styles.contentContainer} showsVerticalScrollIndicator={false}>
+            {renderCategory("/shopping/combs", "Combs" )}
+            {renderCategory("/shopping/pegs", "Pegs" )}
+            {renderCategory("/shopping/mirror", "Mirror" )}
+          </ScrollView>
+          <FooterNav />
+        </View>
+      </SafeAreaView>
+    </SafeAreaProvider>
+    );
+  }
+
+  else if ( deviceScreen().screenWidth == deviceCategories.medium ) {
+    return (
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1, bargroundColor: "green" }}>
+        <View style={styles.container}>
+          {/* Header */}
+          <HeaderNav title="Shop" img="shopping-bag" />
+          {/* Scrollable Content */}
+          <ScrollView contentContainerStyle={styles.contentContainer} showsVerticalScrollIndicator={false}>
+            {renderCategory("/shopping/combs", "Combs" )}
+            {renderCategory("/shopping/pegs", "Pegs" )}
+            {renderCategory("/shopping/mirror", "Mirror" )}
+          </ScrollView>
+          <FooterNav />
+        </View>
+      </SafeAreaView>
+    </SafeAreaProvider>
+    );
+  }
+
+  else if ( deviceScreen().screenWidth == deviceCategories.large ) {
+    return (
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1, bargroundColor: "green" }}>
+        <View style={styles.container}>
+          {/* Header */}
+          <HeaderNav title="Shop" img="shopping-bag" />
+          {/* Scrollable Content */}
+          <ScrollView contentContainerStyle={styles.contentContainer} showsVerticalScrollIndicator={false}>
+            {renderCategory("/shopping/combs", "Combs" )}
+            {renderCategory("/shopping/pegs", "Pegs" )}
+            {renderCategory("/shopping/mirror", "Mirror" )}
+          </ScrollView>
+          <FooterNav />
+        </View>
+      </SafeAreaView>
+    </SafeAreaProvider>
+    );
+  }
+
+  else {
+    return (
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1, bargroundColor: "green" }}>
+        <View style={styles.container}>
+          {/* Header */}
+          <HeaderNav title="Shop" img="shopping-bag" />
+          {/* Scrollable Content */}
+          <ScrollView contentContainerStyle={styles.contentContainer} showsVerticalScrollIndicator={false}>
+            {renderCategory("/shopping/combs", "Combs" )}
+            {renderCategory("/shopping/pegs", "Pegs" )}
+            {renderCategory("/shopping/mirror", "Mirror" )}
+          </ScrollView>
+          <FooterNav />
+        </View>
+      </SafeAreaView>
+    </SafeAreaProvider>
+    );
+  }
+};
 
 const renderCategory = (linking, title) => (
   <Link href={linking} asChild>
