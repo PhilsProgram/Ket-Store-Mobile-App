@@ -7,6 +7,7 @@ import {
   StyleSheet,
   ScrollView,
   StatusBar,
+  TouchableOpacity,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient"; // Use expo-linear-gradient for Expo
 import { HelloWave } from "@/components/HelloWave";
@@ -15,6 +16,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import { deviceScreen, deviceCategories } from "../UI/screenAdjust";
+import { handleContact } from "../UI/contact";
 
 export default function WelcomePage() {
   // Checking the device screens to render the welcome page
@@ -32,9 +34,9 @@ export default function WelcomePage() {
               KET STORE <HelloWave />
             </Text>
             <Text style={styles.addressingInfo}>
-              Before we start, kindly contact the CEO for sign up access pin
+              Before we start, kindly contact the CEO for sign up access pin with link below
             </Text>
-            <Text style={styles.addressing}>WhatsApp link</Text>
+            <TouchableOpacity style={styles.link} onPress={handleContact}>WhatsApp link here</TouchableOpacity>
             <Text style={styles.addressing}>Do you have the pin already?</Text>
             <TextInput placeholder="Enter pin" style={styles.input} />
 
@@ -67,9 +69,9 @@ export default function WelcomePage() {
               KET STORE <HelloWave />
             </Text>
             <Text style={styles.addressingInfo}>
-              Before we start, kindly contact the CEO for sign up access pin
+              Before we start, kindly contact the CEO for sign up access pin with link below
             </Text>
-            <Text style={styles.addressing}>WhatsApp link</Text>
+            <TouchableOpacity style={styles.link} onPress={handleContact}>WhatsApp link here</TouchableOpacity>
             <Text style={styles.addressing}>Do you have the pin already?</Text>
             <TextInput placeholder="Enter pin" style={styles.input} />
 
@@ -102,9 +104,9 @@ export default function WelcomePage() {
               KET STORE <HelloWave />
             </Text>
             <Text style={styles.addressingInfo}>
-              Before we start, kindly contact the CEO for sign up access pin
+              Before we start, kindly contact the CEO for sign up access pin with link below
             </Text>
-            <Text style={styles.addressing}>WhatsApp link</Text>
+            <TouchableOpacity style={styles.link} onPress={handleContact}>WhatsApp link here</TouchableOpacity>
             <Text style={styles.addressing}>Do you have the pin already?</Text>
             <TextInput placeholder="Enter pin" style={styles.input} />
 
@@ -137,9 +139,9 @@ export default function WelcomePage() {
               KET STORE <HelloWave />
             </Text>
             <Text style={styles.addressingInfo}>
-              Before we start, kindly contact the CEO for sign up access pin
+              Before we start, kindly contact the CEO for sign up access pin with link below
             </Text>
-            <Text style={styles.addressing}>WhatsApp link</Text>
+            <TouchableOpacity style={styles.link} onPress={handleContact}>WhatsApp link here</TouchableOpacity>
             <Text style={styles.addressing}>Do you have the pin already?</Text>
             <TextInput placeholder="Enter pin" style={styles.input} />
 
@@ -165,21 +167,21 @@ export default function WelcomePage() {
         style={styles.linearGradient}
       >
         <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-          <View style={styles.innerContainer}>
+        <ScrollView contentContainerStyle={styles.scrollContainerxlarge}>
+          <View style={styles.innerContainerxlarge}>
             <Text style={styles.contentText}>Welcome to </Text>
             <Text style={styles.companyName}>
               KET STORE <HelloWave />
             </Text>
             <Text style={styles.addressingInfo}>
-              Before we start, kindly contact the CEO for sign up access pin
+              Before we start, kindly contact the CEO for sign up access pin with link below
             </Text>
-            <Text style={styles.addressing}>WhatsApp link</Text>
+            <TouchableOpacity style={styles.link} onPress={handleContact}>WhatsApp link here</TouchableOpacity>
             <Text style={styles.addressing}>Do you have the pin already?</Text>
             <TextInput placeholder="Enter pin" style={styles.input} />
 
             <Link href="/signup" asChild>
-              <Pressable style={styles.button}>
+              <Pressable style={styles.buttonxlarge}>
                 <Text style={styles.buttonText}>Continue</Text>
               </Pressable>
             </Link>
@@ -205,12 +207,28 @@ const styles = StyleSheet.create({
     paddingTop: "40%",
     height: hp(100),
   },
+
+  scrollContainerxlarge: {
+    flexGrow: 1,
+    justifyContent: "center",
+    paddingTop: "10%",
+    height: hp(70),
+  },
+
   innerContainer: {
     borderRadius: 10,
     width: "80%",
     alignSelf: "center",
     justifyContent: "space-evenly",
   },
+
+  innerContainerxlarge: {
+    borderRadius: 10,
+    width: "60%",
+    alignSelf: "center",
+    justifyContent: "space-evenly",
+  },
+
   contentText: {
     fontSize: 18,
     fontWeight: "bold",
@@ -227,7 +245,18 @@ const styles = StyleSheet.create({
     fontSize: 17,
     alignSelf: "center",
     fontWeight: "100",
+    fontFamily: "sans-serif",
   },
+
+  link: {
+    color: "black",
+    fontSize: 17,
+    alignSelf: "center",
+    fontWeight: "700",
+    fontFamily: "sans-serif",
+    paddingBottom: 10,
+  },
+
   addressingInfo: {
     color: "white",
     fontSize: 17,
@@ -251,6 +280,17 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: "50%",
     height: "9%",
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "center",
+    marginBottom: 40,
+  },
+  buttonxlarge: {
+    backgroundColor: "black",
+    borderRadius: 10,
+    marginTop: 10,
+    width: "50%",
+    height: "13%",
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "center",
