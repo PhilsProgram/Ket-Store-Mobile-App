@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Alert, Dimension } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Alert } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import FooterNav from "../navigations/footerNav";
-import { useEffect ,useState } from "react";
 import HeaderNav from "../navigations/HeaderNav";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 import { Link } from "expo-router";
