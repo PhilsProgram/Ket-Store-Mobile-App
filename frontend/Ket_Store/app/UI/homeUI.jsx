@@ -15,18 +15,18 @@ export function XSmallUI() {
     return (
     // The nav bar for the page
     <SafeAreaProvider>
-        <SafeAreaView style={styles.safeArea}>
-        <View style={styles.container}>
+        <SafeAreaView style={xsmall.safeArea}>
+        <View style={xsmall.container}>
             <HeaderNav title="Home" img="home" />
 
           {/* **********************************        The main content of the screen       ********************************* */}
 
             <ScrollView
-            style={styles.contentPage}
+            style={xsmall.contentPage}
             showsVerticalScrollIndicator={false}
             >
             {/* Trending sales section */}
-            <View style={styles.customStyle}>
+            <View style={xsmall.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -39,11 +39,11 @@ export function XSmallUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={xsmall.placeHolder}></View>
             </View>
 
             {/* Best sellers section */}
-            <View style={styles.customStyle}>
+            <View style={xsmall.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -56,11 +56,11 @@ export function XSmallUI() {
                 >
                 New Arrivals
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={xsmall.placeHolder}></View>
             </View>
 
             {/* New arrivals section */}
-            <View style={styles.customStyle}>
+            <View style={xsmall.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -73,7 +73,7 @@ export function XSmallUI() {
                 >
                 Categories
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={xsmall.placeHolder}></View>
             </View>
             </ScrollView>
 
@@ -95,18 +95,18 @@ export function SmallUI() {
     return (
     // The nav bar for the page
     <SafeAreaProvider>
-        <SafeAreaView style={styles.safeArea}>
-        <View style={styles.container}>
+        <SafeAreaView style={small.safeArea}>
+        <View style={small.container}>
             <HeaderNav title="Home" img="home" />
 
           {/* **********************************        The main content of the screen       ********************************* */}
 
             <ScrollView
-            style={styles.contentPage}
+            style={small.contentPage}
             showsVerticalScrollIndicator={false}
             >
             {/* Trending sales section */}
-            <View style={styles.customStyle}>
+            <View style={small.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -119,11 +119,11 @@ export function SmallUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={small.placeHolder}></View>
             </View>
 
             {/* Best sellers section */}
-            <View style={styles.customStyle}>
+            <View style={small.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -136,11 +136,11 @@ export function SmallUI() {
                 >
                 New Arrivals
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={small.placeHolder}></View>
             </View>
 
             {/* New arrivals section */}
-            <View style={styles.customStyle}>
+            <View style={small.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -153,7 +153,7 @@ export function SmallUI() {
                 >
                 Categories
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={small.placeHolder}></View>
             </View>
             </ScrollView>
 
@@ -175,18 +175,18 @@ export function MediumUI() {
     return (
     // The nav bar for the page
     <SafeAreaProvider>
-        <SafeAreaView style={styles.safeArea}>
-        <View style={styles.container}>
+        <SafeAreaView style={medium.safeArea}>
+        <View style={medium.container}>
             <HeaderNav title="Home" img="home" />
 
           {/* **********************************        The main content of the screen       ********************************* */}
 
             <ScrollView
-            style={styles.contentPage}
+            style={medium.contentPage}
             showsVerticalScrollIndicator={false}
             >
             {/* Trending sales section */}
-            <View style={styles.customStyle}>
+            <View style={medium.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -199,11 +199,11 @@ export function MediumUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={medium.placeHolder}></View>
             </View>
 
             {/* Best sellers section */}
-            <View style={styles.customStyle}>
+            <View style={medium.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -216,11 +216,11 @@ export function MediumUI() {
                 >
                 New Arrivals
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={medium.placeHolder}></View>
             </View>
 
             {/* New arrivals section */}
-            <View style={styles.customStyle}>
+            <View style={medium.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -233,7 +233,7 @@ export function MediumUI() {
                 >
                 Categories
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={medium.placeHolder}></View>
             </View>
             </ScrollView>
 
@@ -405,7 +405,70 @@ export function XLargeUI() {
     );
 };
 
-const styles = StyleSheet.create({
+// Styles for various screen sizes
+const xsmall = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+    },
+    container: {
+        flex: 1,
+    backgroundColor: "#fff",
+    },
+    contentPage: {
+        width: "90%",
+        borderStyle: "solid",
+        borderColor: "#D9D9D9",
+        borderBottomWidth: 1,
+        alignSelf: "center",
+        marginBottom: wp(17),
+    },
+    customStyle: {
+        height: hp(52),
+    },
+    placeHolder: {
+        width: "100%",
+        height: hp(40),
+        alignSelf: "center",
+        borderRadius: 10,
+        backgroundColor: "#D9D9D9",
+    },
+    sectionHeader: {
+
+    },
+});
+
+const small = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+    },
+    container: {
+        flex: 1,
+    backgroundColor: "#fff",
+    },
+    contentPage: {
+        width: "90%",
+        borderStyle: "solid",
+        borderColor: "#D9D9D9",
+        borderBottomWidth: 1,
+        alignSelf: "center",
+        marginBottom: wp(17),
+    },
+    customStyle: {
+        height: hp(52),
+    },
+    placeHolder: {
+        width: "100%",
+        height: hp(40),
+        alignSelf: "center",
+        borderRadius: 10,
+        backgroundColor: "#D9D9D9",
+    },
+    sectionHeader: {
+
+    },
+});
+
+const medium = StyleSheet.create({
     safeArea: {
         flex: 1,
     },

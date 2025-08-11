@@ -5,212 +5,657 @@ import { HelloWave } from "@/components/HelloWave";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 import { handleContact } from "../services/contact";
 
-// Extra small UI
 export const XSmallUI = () => {
     return (
     <LinearGradient
         colors={["#BDAC47", "#9D2B27"]}
-        style={styles.linearGradient}
+        style={xsmall.linearGradient}
     >
         <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <View style={styles.innerContainer}>
-            <Text style={styles.contentText}>Welcome to </Text>
-            <Text style={styles.companyName}>
+        <ScrollView contentContainerStyle={xsmall.scrollContainer}>
+        <View style={xsmall.innerContainer}>
+            <Text style={xsmall.contentText}>Welcome to </Text>
+            <Text style={xsmall.companyName}>
             KET STORE <HelloWave />
             </Text>
-            <Text style={styles.addressingInfo}>
+            <Text style={xsmall.addressingInfo}>
             Before we start, kindly contact the CEO for sign up access pin with
             link below
             </Text>
-            <TouchableOpacity style={styles.link} onPress={handleContact}>
+            <TouchableOpacity style={xsmall.link} onPress={handleContact}>
             WhatsApp link here
             </TouchableOpacity>
-            <Text style={styles.addressing}>Do you have the pin already?</Text>
-            <TextInput placeholder="Enter pin" style={styles.input} />
+            <Text style={xsmall.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={xsmall.input} />
 
             <Link href="/signup" asChild>
-            <Pressable style={styles.button}>
-                <Text style={styles.buttonText}>Continue</Text>
+            <Pressable style={xsmall.button}>
+                <Text style={xsmall.buttonText}>Continue</Text>
             </Pressable>
             </Link>
 
-            <Text style={styles.addressing}>
+            <Text style={xsmall.addressing}>
             Shop the best "Everyday Essentials" at our store and have it
             delivered intact
             </Text>
-            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+            <Text style={xsmall.addressTag}>@KET Dynasty Enterprise</Text>
         </View>
         </ScrollView>
     </LinearGradient>
     );
 };
 
-// Small UI
 export const SmallUI = () => {
     return (
     <LinearGradient
         colors={["#BDAC47", "#9D2B27"]}
-        style={styles.linearGradient}
+        style={small.linearGradient}
     >
         <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <View style={styles.innerContainer}>
-            <Text style={styles.contentText}>Welcome to </Text>
-            <Text style={styles.companyName}>
+        <ScrollView contentContainerStyle={small.scrollContainer}>
+        <View style={small.innerContainer}>
+            <Text style={small.contentText}>Welcome to </Text>
+            <Text style={small.companyName}>
             KET STORE <HelloWave />
             </Text>
-            <Text style={styles.addressingInfo}>
+            <Text style={small.addressingInfo}>
             Before we start, kindly contact the CEO for sign up access pin with
             link below
             </Text>
-            <TouchableOpacity style={styles.link} onPress={handleContact}>
+            <TouchableOpacity style={small.link} onPress={handleContact}>
             WhatsApp link here
             </TouchableOpacity>
-            <Text style={styles.addressing}>Do you have the pin already?</Text>
-            <TextInput placeholder="Enter pin" style={styles.input} />
+            <Text style={small.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={small.input} />
 
             <Link href="/signup" asChild>
-            <Pressable style={styles.button}>
-                <Text style={styles.buttonText}>Continue</Text>
+            <Pressable style={small.button}>
+                <Text style={small.buttonText}>Continue</Text>
             </Pressable>
             </Link>
 
-            <Text style={styles.addressing}>
+            <Text style={small.addressing}>
             Shop the best "Everyday Essentials" at our store and have it
             delivered intact
             </Text>
-            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+            <Text style={small.addressTag}>@KET Dynasty Enterprise</Text>
         </View>
         </ScrollView>
     </LinearGradient>
     );
 };
 
-// Medium UI
 export const MediumUI = () => {
     return (
     <LinearGradient
         colors={["#BDAC47", "#9D2B27"]}
-        style={styles.linearGradient}
+        style={medium.linearGradient}
     >
         <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <View style={styles.innerContainer}>
-            <Text style={styles.contentText}>Welcome to </Text>
-            <Text style={styles.companyName}>
+        <ScrollView contentContainerStyle={medium.scrollContainer}>
+        <View style={medium.innerContainer}>
+            <Text style={medium.contentText}>Welcome to </Text>
+            <Text style={medium.companyName}>
             KET STORE <HelloWave />
             </Text>
-            <Text style={styles.addressingInfo}>
+            <Text style={medium.addressingInfo}>
             Before we start, kindly contact the CEO for sign up access pin with
             link below
             </Text>
-            <TouchableOpacity style={styles.link} onPress={handleContact}>
+            <TouchableOpacity style={medium.link} onPress={handleContact}>
             WhatsApp link here
             </TouchableOpacity>
-            <Text style={styles.addressing}>Do you have the pin already?</Text>
-            <TextInput placeholder="Enter pin" style={styles.input} />
+            <Text style={medium.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={medium.input} />
 
             <Link href="/signup" asChild>
-            <Pressable style={styles.button}>
-                <Text style={styles.buttonText}>Continue</Text>
+            <Pressable style={medium.button}>
+                <Text style={medium.buttonText}>Continue</Text>
             </Pressable>
             </Link>
 
-            <Text style={styles.addressing}>
+            <Text style={medium.addressing}>
             Shop the best "Everyday Essentials" at our store and have it
             delivered intact
             </Text>
-            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+            <Text style={medium.addressTag}>@KET Dynasty Enterprise</Text>
         </View>
         </ScrollView>
     </LinearGradient>
         );
     };
 
-// Large UI
 export const LargeUI = () => {
     return (
     <LinearGradient
         colors={["#BDAC47", "#9D2B27"]}
-        style={styles.linearGradient}
+        style={large.linearGradient}
     >
         <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <View style={styles.innerContainer}>
-            <Text style={styles.contentText}>Welcome to </Text>
-            <Text style={styles.companyName}>
+        <ScrollView contentContainerStyle={large.scrollContainer}>
+        <View style={large.innerContainer}>
+            <Text style={large.contentText}>Welcome to </Text>
+            <Text style={large.companyName}>
             KET STORE <HelloWave />
             </Text>
-            <Text style={styles.addressingInfo}>
+            <Text style={large.addressingInfo}>
             Before we start, kindly contact the CEO for sign up access pin with
             link below
             </Text>
-            <TouchableOpacity style={styles.link} onPress={handleContact}>
+            <TouchableOpacity style={large.link} onPress={handleContact}>
             WhatsApp link here
             </TouchableOpacity>
-            <Text style={styles.addressing}>Do you have the pin already?</Text>
-            <TextInput placeholder="Enter pin" style={styles.input} />
+            <Text style={large.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={large.input} />
 
             <Link href="/signup" asChild>
-            <Pressable style={styles.button}>
-                <Text style={styles.buttonText}>Continue</Text>
+            <Pressable style={large.button}>
+                <Text style={large.buttonText}>Continue</Text>
             </Pressable>
             </Link>
 
-            <Text style={styles.addressing}>
+            <Text style={large.addressing}>
             Shop the best "Everyday Essentials" at our store and have it
             delivered intact
             </Text>
-            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+            <Text style={large.addressTag}>@KET Dynasty Enterprise</Text>
         </View>
         </ScrollView>
     </LinearGradient>
     );
 };
 
-// XLarge UI
 export const XLargeUI = () => {
     return (
     <LinearGradient
         colors={["#BDAC47", "#9D2B27"]}
-        style={styles.linearGradient}
+        style={xlarge.linearGradient}
     >
         <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
         <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.innerContainer}>
-            <Text style={styles.contentText}>Welcome to </Text>
-            <Text style={styles.companyName}>
+            <Text style={xlarge.contentText}>Welcome to </Text>
+            <Text style={xlarge.companyName}>
             KET STORE <HelloWave />
             </Text>
-            <Text style={styles.addressingInfo}>
+            <Text style={xlarge.addressingInfo}>
             Before we start, kindly contact the CEO for sign up access pin with
             link below
             </Text>
-            <TouchableOpacity style={styles.link} onPress={handleContact}>
+            <TouchableOpacity style={xlarge.link} onPress={handleContact}>
             WhatsApp link here
             </TouchableOpacity>
-            <Text style={styles.addressing}>Do you have the pin already?</Text>
-            <TextInput placeholder="Enter pin" style={styles.input} />
+            <Text style={xlarge.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={xlarge.input} />
 
             <Link href="/signup" asChild>
-            <Pressable style={styles.button}>
-                <Text style={styles.buttonText}>Continue</Text>
+            <Pressable style={xlarge.button}>
+                <Text style={xlarge.buttonText}>Continue</Text>
             </Pressable>
             </Link>
 
-            <Text style={styles.addressing}>
+            <Text style={xlarge.addressing}>
             Shop the best "Everyday Essentials" at our store and have it
             delivered intact
             </Text>
-            <Text style={styles.addressTag}>@KET Dynasty Enterprise</Text>
+            <Text style={xlarge.addressTag}>@KET Dynasty Enterprise</Text>
         </View>
         </ScrollView>
     </LinearGradient>
     );
 };
 
-const styles = StyleSheet.create({
+
+// Styles for various screen sizes
+const xsmall = StyleSheet.create({
+    linearGradient: {
+        flex: 1,
+    },
+    scrollContainer: {
+        flexGrow: 1,
+        justifyContent: "center",
+        paddingTop: "40%",
+        height: hp(100),
+    },
+
+    scrollContainerxlarge: {
+        flexGrow: 1,
+        justifyContent: "center",
+        paddingTop: "10%",
+        height: hp(70),
+    },
+
+    innerContainer: {
+        borderRadius: 10,
+        width: "80%",
+        alignSelf: "center",
+        justifyContent: "space-evenly",
+    },
+
+    innerContainerxlarge: {
+        borderRadius: 10,
+        width: "60%",
+        alignSelf: "center",
+        justifyContent: "space-evenly",
+    },
+
+    contentText: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "white",
+    },
+    companyName: {
+        color: "white",
+        fontSize: 30,
+        fontWeight: "bold",
+        marginBottom: 10,
+    },
+    addressing: {
+        color: "white",
+        fontSize: 17,
+        alignSelf: "center",
+        fontWeight: "100",
+        fontFamily: "sans-serif",
+    },
+
+    link: {
+        color: "black",
+        fontSize: 17,
+        alignSelf: "center",
+        fontWeight: "700",
+        fontFamily: "sans-serif",
+        paddingBottom: 10,
+    },
+
+    addressingInfo: {
+        color: "white",
+        fontSize: 17,
+        fontWeight: "100",
+        marginBottom: "5%",
+    },
+    input: {
+        borderWidth: 1,
+        borderColor: "black",
+        backgroundColor: "white",
+        padding: 10,
+        width: "80%",
+        marginTop: 10,
+        marginBottom: 20,
+        borderRadius: 6,
+        alignSelf: "center",
+    },
+    button: {
+        backgroundColor: "black",
+        borderRadius: 10,
+        marginTop: 10,
+        width: "50%",
+        height: "9%",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        marginBottom: 40,
+    },
+    buttonxlarge: {
+        backgroundColor: "black",
+        borderRadius: 10,
+        marginTop: 10,
+        width: "50%",
+        height: "13%",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        marginBottom: 40,
+    },
+    buttonText: {
+        color: "white",
+        fontWeight: "bold",
+    },
+    addressTag: {
+        color: "white",
+        fontSize: 12,
+        alignSelf: "center",
+        marginTop: "5%",
+        fontWeight: "900",
+    },
+});
+
+const small = StyleSheet.create({
+    linearGradient: {
+        flex: 1,
+    },
+    scrollContainer: {
+        flexGrow: 1,
+        justifyContent: "center",
+        paddingTop: "40%",
+        height: hp(100),
+    },
+
+    scrollContainerxlarge: {
+        flexGrow: 1,
+        justifyContent: "center",
+        paddingTop: "10%",
+        height: hp(70),
+    },
+
+    innerContainer: {
+        borderRadius: 10,
+        width: "80%",
+        alignSelf: "center",
+        justifyContent: "space-evenly",
+    },
+
+    innerContainerxlarge: {
+        borderRadius: 10,
+        width: "60%",
+        alignSelf: "center",
+        justifyContent: "space-evenly",
+    },
+
+    contentText: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "white",
+    },
+    companyName: {
+        color: "white",
+        fontSize: 30,
+        fontWeight: "bold",
+        marginBottom: 10,
+    },
+    addressing: {
+        color: "white",
+        fontSize: 17,
+        alignSelf: "center",
+        fontWeight: "100",
+        fontFamily: "sans-serif",
+    },
+
+    link: {
+        color: "black",
+        fontSize: 17,
+        alignSelf: "center",
+        fontWeight: "700",
+        fontFamily: "sans-serif",
+        paddingBottom: 10,
+    },
+
+    addressingInfo: {
+        color: "white",
+        fontSize: 17,
+        fontWeight: "100",
+        marginBottom: "5%",
+    },
+    input: {
+        borderWidth: 1,
+        borderColor: "black",
+        backgroundColor: "white",
+        padding: 10,
+        width: "80%",
+        marginTop: 10,
+        marginBottom: 20,
+        borderRadius: 6,
+        alignSelf: "center",
+    },
+    button: {
+        backgroundColor: "black",
+        borderRadius: 10,
+        marginTop: 10,
+        width: "50%",
+        height: "9%",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        marginBottom: 40,
+    },
+    buttonxlarge: {
+        backgroundColor: "black",
+        borderRadius: 10,
+        marginTop: 10,
+        width: "50%",
+        height: "13%",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        marginBottom: 40,
+    },
+    buttonText: {
+        color: "white",
+        fontWeight: "bold",
+    },
+    addressTag: {
+        color: "white",
+        fontSize: 12,
+        alignSelf: "center",
+        marginTop: "5%",
+        fontWeight: "900",
+    },
+});
+
+const medium = StyleSheet.create({
+    linearGradient: {
+        flex: 1,
+    },
+    scrollContainer: {
+        flexGrow: 1,
+        justifyContent: "center",
+        paddingTop: "40%",
+        height: hp(100),
+    },
+
+    scrollContainerxlarge: {
+        flexGrow: 1,
+        justifyContent: "center",
+        paddingTop: "10%",
+        height: hp(70),
+    },
+
+    innerContainer: {
+        borderRadius: 10,
+        width: "80%",
+        alignSelf: "center",
+        justifyContent: "space-evenly",
+    },
+
+    innerContainerxlarge: {
+        borderRadius: 10,
+        width: "60%",
+        alignSelf: "center",
+        justifyContent: "space-evenly",
+    },
+
+    contentText: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "white",
+    },
+    companyName: {
+        color: "white",
+        fontSize: 30,
+        fontWeight: "bold",
+        marginBottom: 10,
+    },
+    addressing: {
+        color: "white",
+        fontSize: 17,
+        alignSelf: "center",
+        fontWeight: "100",
+        fontFamily: "sans-serif",
+    },
+
+    link: {
+        color: "black",
+        fontSize: 17,
+        alignSelf: "center",
+        fontWeight: "700",
+        fontFamily: "sans-serif",
+        paddingBottom: 10,
+    },
+
+    addressingInfo: {
+        color: "white",
+        fontSize: 17,
+        fontWeight: "100",
+        marginBottom: "5%",
+    },
+    input: {
+        borderWidth: 1,
+        borderColor: "black",
+        backgroundColor: "white",
+        padding: 10,
+        width: "80%",
+        marginTop: 10,
+        marginBottom: 20,
+        borderRadius: 6,
+        alignSelf: "center",
+    },
+    button: {
+        backgroundColor: "black",
+        borderRadius: 10,
+        marginTop: 10,
+        width: "50%",
+        height: "9%",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        marginBottom: 40,
+    },
+    buttonxlarge: {
+        backgroundColor: "black",
+        borderRadius: 10,
+        marginTop: 10,
+        width: "50%",
+        height: "13%",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        marginBottom: 40,
+    },
+    buttonText: {
+        color: "white",
+        fontWeight: "bold",
+    },
+    addressTag: {
+        color: "white",
+        fontSize: 12,
+        alignSelf: "center",
+        marginTop: "5%",
+        fontWeight: "900",
+    },
+});
+
+const large = StyleSheet.create({
+    linearGradient: {
+        flex: 1,
+    },
+    scrollContainer: {
+        flexGrow: 1,
+        justifyContent: "center",
+        paddingTop: "40%",
+        height: hp(100),
+    },
+
+    scrollContainerxlarge: {
+        flexGrow: 1,
+        justifyContent: "center",
+        paddingTop: "10%",
+        height: hp(70),
+    },
+
+    innerContainer: {
+        borderRadius: 10,
+        width: "80%",
+        alignSelf: "center",
+        justifyContent: "space-evenly",
+    },
+
+    innerContainerxlarge: {
+        borderRadius: 10,
+        width: "60%",
+        alignSelf: "center",
+        justifyContent: "space-evenly",
+    },
+
+    contentText: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "white",
+    },
+    companyName: {
+        color: "white",
+        fontSize: 30,
+        fontWeight: "bold",
+        marginBottom: 10,
+    },
+    addressing: {
+        color: "white",
+        fontSize: 17,
+        alignSelf: "center",
+        fontWeight: "100",
+        fontFamily: "sans-serif",
+    },
+
+    link: {
+        color: "black",
+        fontSize: 17,
+        alignSelf: "center",
+        fontWeight: "700",
+        fontFamily: "sans-serif",
+        paddingBottom: 10,
+    },
+
+    addressingInfo: {
+        color: "white",
+        fontSize: 17,
+        fontWeight: "100",
+        marginBottom: "5%",
+    },
+    input: {
+        borderWidth: 1,
+        borderColor: "black",
+        backgroundColor: "white",
+        padding: 10,
+        width: "80%",
+        marginTop: 10,
+        marginBottom: 20,
+        borderRadius: 6,
+        alignSelf: "center",
+    },
+    button: {
+        backgroundColor: "black",
+        borderRadius: 10,
+        marginTop: 10,
+        width: "50%",
+        height: "9%",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        marginBottom: 40,
+    },
+    buttonxlarge: {
+        backgroundColor: "black",
+        borderRadius: 10,
+        marginTop: 10,
+        width: "50%",
+        height: "13%",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        marginBottom: 40,
+    },
+    buttonText: {
+        color: "white",
+        fontWeight: "bold",
+    },
+    addressTag: {
+        color: "white",
+        fontSize: 12,
+        alignSelf: "center",
+        marginTop: "5%",
+        fontWeight: "900",
+    },
+});
+
+const xlarge = StyleSheet.create({
     linearGradient: {
         flex: 1,
     },
