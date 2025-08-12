@@ -2,7 +2,7 @@ import React from "react";
 import { View, useWindowDimensions } from "react-native";
 import { XSmallUI, SmallUI, MediumUI, LargeUI } from "../UI/cartUI.jsx";
 
-export default function WelcomeScreen() {
+export default function CartScreen() {
   const { width } = useWindowDimensions();
   return (
     <View style={{ flex: 1 }}>

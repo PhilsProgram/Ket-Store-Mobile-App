@@ -12,7 +12,7 @@ import { Link } from "expo-router";
 const NavItem = ({ icon, label, linking }) => (
     <Link href={linking} asChild>
     <TouchableOpacity style={styles.navItem}>
-      <FontAwesome5 name={icon} size={23} color="#fff" />
+      <FontAwesome5 name={icon} size={29} color="#fff" />
       <Text style={styles.navText}>{label}</Text>
     </TouchableOpacity>
     </Link>

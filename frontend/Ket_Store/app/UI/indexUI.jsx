@@ -172,8 +172,8 @@ export const XLargeUI = () => {
         style={xlarge.linearGradient}
     >
         <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <View style={styles.innerContainer}>
+        <ScrollView contentContainerStyle={xlarge.scrollContainer}>
+        <View style={xlarge.innerContainer}>
             <Text style={xlarge.contentText}>Welcome to </Text>
             <Text style={xlarge.companyName}>
             KET STORE <HelloWave />
@@ -662,20 +662,13 @@ const xlarge = StyleSheet.create({
     scrollContainer: {
         flexGrow: 1,
         justifyContent: "center",
-        paddingTop: "40%",
-        height: hp(100),
-    },
-
-    scrollContainerxlarge: {
-        flexGrow: 1,
-        justifyContent: "center",
         paddingTop: "10%",
-        height: hp(70),
+        height: hp(100),
     },
 
     innerContainer: {
         borderRadius: 10,
-        width: "80%",
+        width: "60%",
         alignSelf: "center",
         justifyContent: "space-evenly",
     },
@@ -688,19 +681,19 @@ const xlarge = StyleSheet.create({
     },
 
     contentText: {
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: "bold",
         color: "white",
     },
     companyName: {
         color: "white",
-        fontSize: 30,
+        fontSize: 50,
         fontWeight: "bold",
         marginBottom: 10,
     },
     addressing: {
         color: "white",
-        fontSize: 17,
+        fontSize: 20,
         alignSelf: "center",
         fontWeight: "100",
         fontFamily: "sans-serif",
@@ -708,7 +701,7 @@ const xlarge = StyleSheet.create({
 
     link: {
         color: "black",
-        fontSize: 17,
+        fontSize: 20,
         alignSelf: "center",
         fontWeight: "700",
         fontFamily: "sans-serif",
@@ -717,7 +710,7 @@ const xlarge = StyleSheet.create({
 
     addressingInfo: {
         color: "white",
-        fontSize: 17,
+        fontSize: 18,
         fontWeight: "100",
         marginBottom: "5%",
     },
@@ -727,10 +720,12 @@ const xlarge = StyleSheet.create({
         backgroundColor: "white",
         padding: 10,
         width: "80%",
+        paddingVertical: "1.5%",
         marginTop: 10,
         marginBottom: 20,
         borderRadius: 6,
         alignSelf: "center",
+        fontSize: 18,
     },
     button: {
         backgroundColor: "black",

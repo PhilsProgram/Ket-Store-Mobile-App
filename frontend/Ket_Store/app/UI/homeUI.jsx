@@ -255,18 +255,18 @@ export function LargeUI() {
     return (
     // The nav bar for the page
     <SafeAreaProvider>
-        <SafeAreaView style={styles.safeArea}>
-        <View style={styles.container}>
+        <SafeAreaView style={large.safeArea}>
+        <View style={large.container}>
             <HeaderNav title="Home" img="home" />
 
           {/* **********************************        The main content of the screen       ********************************* */}
 
             <ScrollView
-            style={styles.contentPage}
+            style={large.contentPage}
             showsVerticalScrollIndicator={false}
             >
             {/* Trending sales section */}
-            <View style={styles.customStyle}>
+            <View style={large.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -279,11 +279,11 @@ export function LargeUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={large.placeHolder}></View>
             </View>
 
             {/* Best sellers section */}
-            <View style={styles.customStyle}>
+            <View style={large.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -296,11 +296,11 @@ export function LargeUI() {
                 >
                 New Arrivals
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={large.placeHolder}></View>
             </View>
 
             {/* New arrivals section */}
-            <View style={styles.customStyle}>
+            <View style={large.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -313,7 +313,7 @@ export function LargeUI() {
                 >
                 Categories
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={large.placeHolder}></View>
             </View>
             </ScrollView>
 
@@ -335,18 +335,18 @@ export function XLargeUI() {
     return (
     // The nav bar for the page
     <SafeAreaProvider>
-        <SafeAreaView style={styles.safeArea}>
-        <View style={styles.container}>
+        <SafeAreaView style={xlarge.safeArea}>
+        <View style={xlarge.container}>
             <HeaderNav title="Home" img="home" />
 
           {/* **********************************        The main content of the screen       ********************************* */}
 
             <ScrollView
-            style={styles.contentPage}
+            style={xlarge.contentPage}
             showsVerticalScrollIndicator={false}
             >
             {/* Trending sales section */}
-            <View style={styles.customStyle}>
+            <View style={xlarge.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -354,16 +354,16 @@ export function XLargeUI() {
                     letterSpacing: 2,
                     marginLeft: 15,
                     paddingVertical: 5,
-                    fontSize: isLandscape ? wp(3) : hp(3),
+                    fontSize: isLandscape ? wp(2.5) : hp(3),
                 }}
                 >
                 Trending Sales
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={xlarge.placeHolder}></View>
             </View>
 
             {/* Best sellers section */}
-            <View style={styles.customStyle}>
+            <View style={xlarge.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -371,16 +371,16 @@ export function XLargeUI() {
                     letterSpacing: 2,
                     marginLeft: 15,
                     paddingVertical: 5,
-                    fontSize: isLandscape ? wp(3) : hp(3),
+                    fontSize: isLandscape ? wp(2.5) : hp(3),
                 }}
                 >
                 New Arrivals
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={xlarge.placeHolder}></View>
             </View>
 
             {/* New arrivals section */}
-            <View style={styles.customStyle}>
+            <View style={xlarge.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -388,12 +388,12 @@ export function XLargeUI() {
                     letterSpacing: 2,
                     marginLeft: 15,
                     paddingVertical: 5,
-                    fontSize: isLandscape ? wp(3) : hp(3),
+                    fontSize: isLandscape ? wp(2.5) : hp(3),
                 }}
                 >
                 Categories
                 </Text>
-                <View style={styles.placeHolder}></View>
+                <View style={xlarge.placeHolder}></View>
             </View>
             </ScrollView>
 
@@ -497,4 +497,66 @@ const medium = StyleSheet.create({
     sectionHeader: {
 
     },
+});
+
+const large = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+    },
+    container: {
+        flex: 1,
+    backgroundColor: "#fff",
+    },
+    contentPage: {
+        width: "90%",
+        borderStyle: "solid",
+        borderColor: "#D9D9D9",
+        borderBottomWidth: 1,
+        alignSelf: "center",
+        marginBottom: wp(17),
+    },
+    customStyle: {
+        height: hp(52),
+    },
+    placeHolder: {
+        width: "100%",
+        height: hp(40),
+        alignSelf: "center",
+        borderRadius: 10,
+        backgroundColor: "#D9D9D9",
+    },
+    sectionHeader: {
+
+    },
+});
+
+const xlarge = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+    },
+    container: {
+        flex: 1,
+    backgroundColor: "#fff",
+    },
+    contentPage: {
+        width: "90%",
+        borderStyle: "solid",
+        borderColor: "#D9D9D9",
+        borderBottomWidth: 1,
+        alignSelf: "center",
+        marginBottom: wp(5),
+    },
+    customStyle: {
+        height: hp(52),
+    },
+    placeHolder: {
+        width: "100%",
+        height: hp(40),
+        alignSelf: "center",
+        borderRadius: 10,
+        backgroundColor: "#D9D9D9",
+    },
+    sectionHeader: {
+
+    }
 });
