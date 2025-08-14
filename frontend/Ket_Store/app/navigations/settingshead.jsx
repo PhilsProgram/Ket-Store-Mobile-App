@@ -1,10 +1,5 @@
 import { FontAwesome5 } from "@expo/vector-icons";
-import {
-  StatusBar,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+import { StatusBar, StyleSheet, Text, TouchableOpacity, View,
 } from "react-native";
 import { useRouter } from "expo-router";
 
@@ -32,23 +27,25 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: "#C0C0C0",
     width: "100%",
-    height: "auto",
+    height: 40,
     justifyContent: "center",
     paddingVertical: "2%",
   },
   backArrow: {
     position: "absolute",
-    left: "3%",
+    left: "5%",
   },
   headerText: {
     color: "#B99B43",
-    fontSize: 23,
+    fontSize: 30,
+    fontWeight: "bold",
     marginHorizontal: "15%",
   },
   event: {
     color: "gray",
     fontSize: 20,
     position: "absolute",
-    right: 10
+    right: 10,
+    marginRight: 100
   }
 });

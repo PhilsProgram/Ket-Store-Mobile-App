@@ -9,42 +9,41 @@ export const XSmallUI = () => {
     return (
     <LinearGradient
         colors={["#BDAC47", "#9D2B27"]}
-        style={xsmall.linearGradient}
+        style={small.linearGradient}
     >
         <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
-        <ScrollView contentContainerStyle={xsmall.scrollContainer}>
-        <View style={xsmall.innerContainer}>
-            <Text style={xsmall.contentText}>Welcome to </Text>
-            <Text style={xsmall.companyName}>
+        <ScrollView contentContainerStyle={small.scrollContainer}>
+        <View style={small.innerContainer}>
+            <Text style={small.contentText}>Welcome to </Text>
+            <Text style={small.companyName}>
             KET STORE <HelloWave />
             </Text>
-            <Text style={xsmall.addressingInfo}>
+            <Text style={small.addressingInfo}>
             Before we start, kindly contact the CEO for sign up access pin with
             link below
             </Text>
-            <TouchableOpacity style={xsmall.link} onPress={handleContact}>
+            <TouchableOpacity style={small.link} onPress={handleContact}>
             WhatsApp link here
             </TouchableOpacity>
-            <Text style={xsmall.addressing}>Do you have the pin already?</Text>
-            <TextInput placeholder="Enter pin" style={xsmall.input} />
+            <Text style={small.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={small.input} />
 
             <Link href="/signup" asChild>
-            <Pressable style={xsmall.button}>
-                <Text style={xsmall.buttonText}>Continue</Text>
+            <Pressable style={small.button}>
+                <Text style={small.buttonText}>Continue</Text>
             </Pressable>
             </Link>
 
-            <Text style={xsmall.addressing}>
+            <Text style={small.addressing}>
             Shop the best "Everyday Essentials" at our store and have it
             delivered intact
             </Text>
-            <Text style={xsmall.addressTag}>@KET Dynasty Enterprise</Text>
+            <Text style={small.addressTag}>@KET Dynasty Enterprise</Text>
         </View>
         </ScrollView>
     </LinearGradient>
     );
 };
-
 export const SmallUI = () => {
     return (
     <LinearGradient
@@ -84,7 +83,6 @@ export const SmallUI = () => {
     </LinearGradient>
     );
 };
-
 export const MediumUI = () => {
     return (
     <LinearGradient
@@ -124,7 +122,6 @@ export const MediumUI = () => {
     </LinearGradient>
         );
     };
-
 export const LargeUI = () => {
     return (
     <LinearGradient
@@ -164,161 +161,47 @@ export const LargeUI = () => {
     </LinearGradient>
     );
 };
-
 export const XLargeUI = () => {
     return (
     <LinearGradient
         colors={["#BDAC47", "#9D2B27"]}
-        style={xlarge.linearGradient}
+        style={large.linearGradient}
     >
         <StatusBar barStyle={"light-content"} backgroundColor={"#BDAC47"} />
-        <ScrollView contentContainerStyle={xlarge.scrollContainer}>
-        <View style={xlarge.innerContainer}>
-            <Text style={xlarge.contentText}>Welcome to </Text>
-            <Text style={xlarge.companyName}>
+        <ScrollView contentContainerStyle={large.scrollContainer}>
+        <View style={large.innerContainer}>
+            <Text style={large.contentText}>Welcome to </Text>
+            <Text style={large.companyName}>
             KET STORE <HelloWave />
             </Text>
-            <Text style={xlarge.addressingInfo}>
+            <Text style={large.addressingInfo}>
             Before we start, kindly contact the CEO for sign up access pin with
             link below
             </Text>
-            <TouchableOpacity style={xlarge.link} onPress={handleContact}>
+            <TouchableOpacity style={large.link} onPress={handleContact}>
             WhatsApp link here
             </TouchableOpacity>
-            <Text style={xlarge.addressing}>Do you have the pin already?</Text>
-            <TextInput placeholder="Enter pin" style={xlarge.input} />
+            <Text style={large.addressing}>Do you have the pin already?</Text>
+            <TextInput placeholder="Enter pin" style={large.input} />
 
             <Link href="/signup" asChild>
-            <Pressable style={xlarge.button}>
-                <Text style={xlarge.buttonText}>Continue</Text>
+            <Pressable style={large.button}>
+                <Text style={large.buttonText}>Continue</Text>
             </Pressable>
             </Link>
 
-            <Text style={xlarge.addressing}>
+            <Text style={large.addressing}>
             Shop the best "Everyday Essentials" at our store and have it
             delivered intact
             </Text>
-            <Text style={xlarge.addressTag}>@KET Dynasty Enterprise</Text>
+            <Text style={large.addressTag}>@KET Dynasty Enterprise</Text>
         </View>
         </ScrollView>
     </LinearGradient>
     );
 };
 
-
 // Styles for various screen sizes
-const xsmall = StyleSheet.create({
-    linearGradient: {
-        flex: 1,
-    },
-    scrollContainer: {
-        flexGrow: 1,
-        justifyContent: "center",
-        paddingTop: "40%",
-        height: hp(100),
-    },
-
-    scrollContainerxlarge: {
-        flexGrow: 1,
-        justifyContent: "center",
-        paddingTop: "10%",
-        height: hp(70),
-    },
-
-    innerContainer: {
-        borderRadius: 10,
-        width: "80%",
-        alignSelf: "center",
-        justifyContent: "space-evenly",
-    },
-
-    innerContainerxlarge: {
-        borderRadius: 10,
-        width: "60%",
-        alignSelf: "center",
-        justifyContent: "space-evenly",
-    },
-
-    contentText: {
-        fontSize: 18,
-        fontWeight: "bold",
-        color: "white",
-    },
-    companyName: {
-        color: "white",
-        fontSize: 30,
-        fontWeight: "bold",
-        marginBottom: 10,
-    },
-    addressing: {
-        color: "white",
-        fontSize: 17,
-        alignSelf: "center",
-        fontWeight: "100",
-        fontFamily: "sans-serif",
-    },
-
-    link: {
-        color: "black",
-        fontSize: 17,
-        alignSelf: "center",
-        fontWeight: "700",
-        fontFamily: "sans-serif",
-        paddingBottom: 10,
-    },
-
-    addressingInfo: {
-        color: "white",
-        fontSize: 17,
-        fontWeight: "100",
-        marginBottom: "5%",
-    },
-    input: {
-        borderWidth: 1,
-        borderColor: "black",
-        backgroundColor: "white",
-        padding: 10,
-        width: "80%",
-        marginTop: 10,
-        marginBottom: 20,
-        borderRadius: 6,
-        alignSelf: "center",
-    },
-    button: {
-        backgroundColor: "black",
-        borderRadius: 10,
-        marginTop: 10,
-        width: "50%",
-        height: "9%",
-        justifyContent: "center",
-        alignItems: "center",
-        alignSelf: "center",
-        marginBottom: 40,
-    },
-    buttonxlarge: {
-        backgroundColor: "black",
-        borderRadius: 10,
-        marginTop: 10,
-        width: "50%",
-        height: "13%",
-        justifyContent: "center",
-        alignItems: "center",
-        alignSelf: "center",
-        marginBottom: 40,
-    },
-    buttonText: {
-        color: "white",
-        fontWeight: "bold",
-    },
-    addressTag: {
-        color: "white",
-        fontSize: 12,
-        alignSelf: "center",
-        marginTop: "5%",
-        fontWeight: "900",
-    },
-});
-
 const small = StyleSheet.create({
     linearGradient: {
         flex: 1,
@@ -330,7 +213,7 @@ const small = StyleSheet.create({
         height: hp(100),
     },
 
-    scrollContainerxlarge: {
+    scrollContainerlarge: {
         flexGrow: 1,
         justifyContent: "center",
         paddingTop: "10%",
@@ -344,7 +227,7 @@ const small = StyleSheet.create({
         justifyContent: "space-evenly",
     },
 
-    innerContainerxlarge: {
+    innerContainerlarge: {
         borderRadius: 10,
         width: "60%",
         alignSelf: "center",
@@ -407,7 +290,7 @@ const small = StyleSheet.create({
         alignSelf: "center",
         marginBottom: 40,
     },
-    buttonxlarge: {
+    buttonlarge: {
         backgroundColor: "black",
         borderRadius: 10,
         marginTop: 10,
@@ -430,7 +313,6 @@ const small = StyleSheet.create({
         fontWeight: "900",
     },
 });
-
 const medium = StyleSheet.create({
     linearGradient: {
         flex: 1,
@@ -542,120 +424,7 @@ const medium = StyleSheet.create({
         fontWeight: "900",
     },
 });
-
 const large = StyleSheet.create({
-    linearGradient: {
-        flex: 1,
-    },
-    scrollContainer: {
-        flexGrow: 1,
-        justifyContent: "center",
-        paddingTop: "40%",
-        height: hp(100),
-    },
-
-    scrollContainerxlarge: {
-        flexGrow: 1,
-        justifyContent: "center",
-        paddingTop: "10%",
-        height: hp(70),
-    },
-
-    innerContainer: {
-        borderRadius: 10,
-        width: "80%",
-        alignSelf: "center",
-        justifyContent: "space-evenly",
-    },
-
-    innerContainerxlarge: {
-        borderRadius: 10,
-        width: "60%",
-        alignSelf: "center",
-        justifyContent: "space-evenly",
-    },
-
-    contentText: {
-        fontSize: 18,
-        fontWeight: "bold",
-        color: "white",
-    },
-    companyName: {
-        color: "white",
-        fontSize: 30,
-        fontWeight: "bold",
-        marginBottom: 10,
-    },
-    addressing: {
-        color: "white",
-        fontSize: 17,
-        alignSelf: "center",
-        fontWeight: "100",
-        fontFamily: "sans-serif",
-    },
-
-    link: {
-        color: "black",
-        fontSize: 17,
-        alignSelf: "center",
-        fontWeight: "700",
-        fontFamily: "sans-serif",
-        paddingBottom: 10,
-    },
-
-    addressingInfo: {
-        color: "white",
-        fontSize: 17,
-        fontWeight: "100",
-        marginBottom: "5%",
-    },
-    input: {
-        borderWidth: 1,
-        borderColor: "black",
-        backgroundColor: "white",
-        padding: 10,
-        width: "80%",
-        marginTop: 10,
-        marginBottom: 20,
-        borderRadius: 6,
-        alignSelf: "center",
-    },
-    button: {
-        backgroundColor: "black",
-        borderRadius: 10,
-        marginTop: 10,
-        width: "50%",
-        height: "9%",
-        justifyContent: "center",
-        alignItems: "center",
-        alignSelf: "center",
-        marginBottom: 40,
-    },
-    buttonxlarge: {
-        backgroundColor: "black",
-        borderRadius: 10,
-        marginTop: 10,
-        width: "50%",
-        height: "13%",
-        justifyContent: "center",
-        alignItems: "center",
-        alignSelf: "center",
-        marginBottom: 40,
-    },
-    buttonText: {
-        color: "white",
-        fontWeight: "bold",
-    },
-    addressTag: {
-        color: "white",
-        fontSize: 12,
-        alignSelf: "center",
-        marginTop: "5%",
-        fontWeight: "900",
-    },
-});
-
-const xlarge = StyleSheet.create({
     linearGradient: {
         flex: 1,
     },

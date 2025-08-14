@@ -1,25 +1,12 @@
 // creating the user account info page
-
-import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-  KeyboardAvoidingView,
-  Platform,
-  ScrollView,
-  TouchableWithoutFeedback,
-  Keyboard,
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, KeyboardAvoidingView, Platform, ScrollView, TouchableWithoutFeedback, Keyboard, useWindowDimensions
 } from "react-native";
 import SettingsFooter from "../navigations/settingsfooter";
 import SettingsHeader from "../navigations/settingshead";
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 export default function Profile() {
+  const { width } = useWindowDimensions();
   const XSmallUI = () => {
     return (
       <>
@@ -168,7 +155,6 @@ export default function Profile() {
                     Update Image
                   </Text>
                 </TouchableOpacity>
-
                 <TextInput placeholder="Philemon Oppong" style={large.Input} />
                 <TextInput placeholder="***********" style={large.Input} />
                 <TextInput placeholder="+233534665583" style={large.Input} />
@@ -262,17 +248,17 @@ const medium = StyleSheet.create({
 });
 const large = StyleSheet.create({
   parentContainer: {
-    width: wp(100),
-    height: hp(70),
+    width: wp(50),
+    height: hp(80),
     alignSelf: "center",
     paddingVertical: 100,
   },
 
   profilePhoto: {
     borderWidth: 1,
-    width: 200,
+    width: 180,
     alignSelf: "center",
-    height: 200,
+    height: 180,
     borderRadius: "50%",
     backgroundColor: "#f7f7f7",
   },
@@ -288,9 +274,12 @@ const large = StyleSheet.create({
 
   Input: {
     borderWidth: 1,
-    marginHorizontal: "10%",
-    marginVertical: "2%",
-    borderRadius: 10,
+    marginVertical: "1%",
+    paddingVertical: "2%",
+    borderRadius: 20,
     paddingHorizontal: 10,
-  },
+    marginVertical: 28,
+    paddingHorizontal: 30,
+    fontSize: 17
+  }
 });

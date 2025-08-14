@@ -40,12 +40,12 @@ const Orders = ({item}) => {
 
 export const XSmallUI = () => {
   return (
-    <SafeAreaView style={xsmall.container}>
+    <SafeAreaView style={small.container}>
       <HeaderNav title="Cart" img="shopping-cart"/>
       <ScrollView>
         {Orders(items)}
       </ScrollView>
-      <SettingsFooter item={"Place Order"} style={xsmall.orderButton}/>
+      <SettingsFooter item={"Place Order"} style={small.orderButton}/>
       <FooterNav/>
     </SafeAreaView>
   );
@@ -91,79 +91,18 @@ export const LargeUI = () => {
 };
 export const XLargeUI = () => {
   return (
-    <SafeAreaView style={xlarge.container}>
+    <SafeAreaView style={large.container}>
       
     <HeaderNav title="Cart" img="shopping-cart"/>
       <ScrollView>
         {Orders(items)}
       </ScrollView>
-      <SettingsFooter item={"Place Order"} style={xlarge.orderButton}/>
+      <SettingsFooter item={"Place Order"} style={large.orderButton}/>
       <FooterNav/>
     </SafeAreaView>
   );
 };
 
-const xsmall = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: "#fff" 
-  },
-  itemContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 15,
-    borderBottomWidth: 1,
-    borderColor: "#ddd",
-    height: 150,
-  },
-  imagePlaceholder: {
-    width: 110,
-    height: 120,
-    backgroundColor: "#ddd",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 5,
-  },
-  priceTag: {
-    backgroundColor: "#BDAC47",
-    color: "#fff",
-    padding: 5,
-    borderRadius: 5,
-    fontSize: 12,
-  },
-  itemDetails: { 
-    marginLeft: 15 
-  },
-  itemName: { 
-    color: "gray", 
-    fontSize: 15 
-  },
-  itemQty: { 
-    color: "gray", 
-    fontSize: 14 
-  },
-  boldText: { 
-    fontWeight: "bold" 
-  },
-  bulkPrice: {
-    borderColor: "#9D2B27",
-    borderWidth: 1,
-    width: 100,
-    marginTop: "20%",
-    borderRadius: 10,
-    alignItems: "center"
-  },
-  bulkPriceText: {
-    color: "#9D2B27",
-    fontSize: 18
-  },
-  removeItem: {
-    position: "absolute",
-    right: "-45%",
-    top: "-15%"
-  },
-  
-});
 const small = StyleSheet.create({
   container: { 
     flex: 1, 
@@ -287,67 +226,6 @@ const medium = StyleSheet.create({
   
 });
 const large = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: "#fff" 
-  },
-  itemContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 15,
-    borderBottomWidth: 1,
-    borderColor: "#ddd",
-    height: 150,
-  },
-  imagePlaceholder: {
-    width: 110,
-    height: 120,
-    backgroundColor: "#ddd",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 5,
-  },
-  priceTag: {
-    backgroundColor: "#BDAC47",
-    color: "#fff",
-    padding: 5,
-    borderRadius: 5,
-    fontSize: 12,
-  },
-  itemDetails: { 
-    marginLeft: 15 
-  },
-  itemName: { 
-    color: "gray", 
-    fontSize: 15 
-  },
-  itemQty: { 
-    color: "gray", 
-    fontSize: 14 
-  },
-  boldText: { 
-    fontWeight: "bold" 
-  },
-  bulkPrice: {
-    borderColor: "#9D2B27",
-    borderWidth: 1,
-    width: 100,
-    marginTop: "20%",
-    borderRadius: 10,
-    alignItems: "center"
-  },
-  bulkPriceText: {
-    color: "#9D2B27",
-    fontSize: 18
-  },
-  removeItem: {
-    position: "absolute",
-    right: "-45%",
-    top: "-15%"
-  },
-  
-});
-const xlarge = StyleSheet.create({
   container: { 
     flex: 1, 
     backgroundColor: "#fff" 

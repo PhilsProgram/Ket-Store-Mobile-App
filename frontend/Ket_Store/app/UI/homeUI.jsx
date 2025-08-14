@@ -15,14 +15,14 @@ export function XSmallUI() {
     return (
     // The nav bar for the page
     <SafeAreaProvider>
-        <SafeAreaView style={xsmall.safeArea}>
+        <SafeAreaView style={small.safeArea}>
         <View style={xsmall.container}>
             <HeaderNav title="Home" img="home" />
 
           {/* **********************************        The main content of the screen       ********************************* */}
 
             <ScrollView
-            style={xsmall.contentPage}
+            style={small.contentPage}
             showsVerticalScrollIndicator={false}
             >
             {/* Trending sales section */}
@@ -43,7 +43,7 @@ export function XSmallUI() {
             </View>
 
             {/* Best sellers section */}
-            <View style={xsmall.customStyle}>
+            <View style={small.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -56,11 +56,11 @@ export function XSmallUI() {
                 >
                 New Arrivals
                 </Text>
-                <View style={xsmall.placeHolder}></View>
+                <View style={small.placeHolder}></View>
             </View>
 
             {/* New arrivals section */}
-            <View style={xsmall.customStyle}>
+            <View style={small.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -73,7 +73,7 @@ export function XSmallUI() {
                 >
                 Categories
                 </Text>
-                <View style={xsmall.placeHolder}></View>
+                <View style={small.placeHolder}></View>
             </View>
             </ScrollView>
 
@@ -84,7 +84,6 @@ export function XSmallUI() {
     </SafeAreaProvider>
     );
 };
-
 export function SmallUI() {
   // checking whether it is a phone or a tablet
     const isLandscape =
@@ -164,7 +163,6 @@ export function SmallUI() {
     </SafeAreaProvider>
     );
 };
-
 export function MediumUI() {
   // checking whether it is a phone or a tablet
     const isLandscape =
@@ -244,7 +242,6 @@ export function MediumUI() {
     </SafeAreaProvider>
     );
 };
-
 export function LargeUI() {
   // checking whether it is a phone or a tablet
     const isLandscape =
@@ -324,7 +321,6 @@ export function LargeUI() {
     </SafeAreaProvider>
     );
 };
-
 export function XLargeUI() {
   // checking whether it is a phone or a tablet
     const isLandscape =
@@ -335,18 +331,18 @@ export function XLargeUI() {
     return (
     // The nav bar for the page
     <SafeAreaProvider>
-        <SafeAreaView style={xlarge.safeArea}>
-        <View style={xlarge.container}>
+        <SafeAreaView style={large.safeArea}>
+        <View style={large.container}>
             <HeaderNav title="Home" img="home" />
 
           {/* **********************************        The main content of the screen       ********************************* */}
 
             <ScrollView
-            style={xlarge.contentPage}
+            style={large.contentPage}
             showsVerticalScrollIndicator={false}
             >
             {/* Trending sales section */}
-            <View style={xlarge.customStyle}>
+            <View style={large.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -359,11 +355,11 @@ export function XLargeUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={xlarge.placeHolder}></View>
+                <View style={large.placeHolder}></View>
             </View>
 
             {/* Best sellers section */}
-            <View style={xlarge.customStyle}>
+            <View style={large.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -376,11 +372,11 @@ export function XLargeUI() {
                 >
                 New Arrivals
                 </Text>
-                <View style={xlarge.placeHolder}></View>
+                <View style={large.placeHolder}></View>
             </View>
 
             {/* New arrivals section */}
-            <View style={xlarge.customStyle}>
+            <View style={large.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -393,7 +389,7 @@ export function XLargeUI() {
                 >
                 Categories
                 </Text>
-                <View style={xlarge.placeHolder}></View>
+                <View style={large.placeHolder}></View>
             </View>
             </ScrollView>
 
@@ -406,37 +402,6 @@ export function XLargeUI() {
 };
 
 // Styles for various screen sizes
-const xsmall = StyleSheet.create({
-    safeArea: {
-        flex: 1,
-    },
-    container: {
-        flex: 1,
-    backgroundColor: "#fff",
-    },
-    contentPage: {
-        width: "90%",
-        borderStyle: "solid",
-        borderColor: "#D9D9D9",
-        borderBottomWidth: 1,
-        alignSelf: "center",
-        marginBottom: wp(17),
-    },
-    customStyle: {
-        height: hp(52),
-    },
-    placeHolder: {
-        width: "100%",
-        height: hp(40),
-        alignSelf: "center",
-        borderRadius: 10,
-        backgroundColor: "#D9D9D9",
-    },
-    sectionHeader: {
-
-    },
-});
-
 const small = StyleSheet.create({
     safeArea: {
         flex: 1,
@@ -467,7 +432,6 @@ const small = StyleSheet.create({
 
     },
 });
-
 const medium = StyleSheet.create({
     safeArea: {
         flex: 1,
@@ -498,39 +462,7 @@ const medium = StyleSheet.create({
 
     },
 });
-
 const large = StyleSheet.create({
-    safeArea: {
-        flex: 1,
-    },
-    container: {
-        flex: 1,
-    backgroundColor: "#fff",
-    },
-    contentPage: {
-        width: "90%",
-        borderStyle: "solid",
-        borderColor: "#D9D9D9",
-        borderBottomWidth: 1,
-        alignSelf: "center",
-        marginBottom: wp(17),
-    },
-    customStyle: {
-        height: hp(52),
-    },
-    placeHolder: {
-        width: "100%",
-        height: hp(40),
-        alignSelf: "center",
-        borderRadius: 10,
-        backgroundColor: "#D9D9D9",
-    },
-    sectionHeader: {
-
-    },
-});
-
-const xlarge = StyleSheet.create({
     safeArea: {
         flex: 1,
     },

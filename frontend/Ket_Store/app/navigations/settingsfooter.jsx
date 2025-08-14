@@ -17,18 +17,17 @@ export default function SettingsFooter({item}) {
 const styles = StyleSheet.create({
     button: {
         backgroundColor: "#B99B43",
-        width: "70%",
+        width: "40%",
         borderRadius: 50,
         alignSelf: "center",
-        padding: "2%",
-        marginBottom: "2%"
+        padding: "0.4%"
       },
 
       buttonText: {
         textAlign: "center",
         color: "white",
         height: "auto",
-        fontSize: wp(3.7),
+        fontSize: wp(2),
         fontWeight: "bold"
-      }
+      },
 })

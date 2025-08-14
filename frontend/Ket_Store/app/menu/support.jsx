@@ -1,19 +1,8 @@
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-  Platform,
-  KeyboardAvoidingView,
-  Dimensions
+import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View, Platform, KeyboardAvoidingView, Dimensions
 } from "react-native";
 import SettingsHeader from "../navigations/settingshead";
 import SettingsFooter from "../navigations/settingsfooter";
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
+import { widthPercentageToDP as wp, heightPercentageToDP as hp
 } from "react-native-responsive-screen";
 
 export default function Support() {
