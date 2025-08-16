@@ -16,7 +16,7 @@ export function XSmallUI() {
     // The nav bar for the page
     <SafeAreaProvider>
         <SafeAreaView style={small.safeArea}>
-        <View style={xsmall.container}>
+        <View style={small.container}>
             <HeaderNav title="Home" img="home" />
 
           {/* **********************************        The main content of the screen       ********************************* */}
@@ -26,7 +26,7 @@ export function XSmallUI() {
             showsVerticalScrollIndicator={false}
             >
             {/* Trending sales section */}
-            <View style={xsmall.customStyle}>
+            <View style={small.customStyle}>
                 <Text
                 style={{
                     color: "#9D2B27",
@@ -39,7 +39,7 @@ export function XSmallUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={xsmall.placeHolder}></View>
+                <View style={small.placeHolder}></View>
             </View>
 
             {/* Best sellers section */}
@@ -416,7 +416,7 @@ const small = StyleSheet.create({
         borderColor: "#D9D9D9",
         borderBottomWidth: 1,
         alignSelf: "center",
-        marginBottom: wp(17),
+        marginBottom: hp(10),
     },
     customStyle: {
         height: hp(52),
@@ -446,7 +446,7 @@ const medium = StyleSheet.create({
         borderColor: "#D9D9D9",
         borderBottomWidth: 1,
         alignSelf: "center",
-        marginBottom: wp(17),
+        marginBottom: hp(10),
     },
     customStyle: {
         height: hp(52),

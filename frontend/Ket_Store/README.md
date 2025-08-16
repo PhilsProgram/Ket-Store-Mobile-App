@@ -48,3 +48,9 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Little assistance at the frontend
+Colors used at the frontend
+There were two colors idealy used at the frontend. 
+- `#a6a056ff` (dark yellow)
+- `#8B0000` (dark red)
