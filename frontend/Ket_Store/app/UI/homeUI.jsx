@@ -84,7 +84,7 @@ export function XSmallUI() {
     </SafeAreaProvider>
     );
 };
-export function SmallUI() {
+export default function SmallUI() {
   // checking whether it is a phone or a tablet
     const isLandscape =
     Dimensions.get("window").width > Dimensions.get("window").height;
@@ -94,7 +94,7 @@ export function SmallUI() {
     return (
     // The nav bar for the page
     <SafeAreaProvider>
-        <SafeAreaView style={small.safeArea}>
+        <SafeAreaView style={small.safeArea} edges={["top", "left", "right", "bottom"]}>
         <View style={small.container}>
             <HeaderNav title="Home" img="home" />
 
@@ -321,7 +321,7 @@ export function LargeUI() {
     </SafeAreaProvider>
     );
 };
-export function XLargeUI() {
+export  function XLargeUI() {
   // checking whether it is a phone or a tablet
     const isLandscape =
     Dimensions.get("window").width > Dimensions.get("window").height;
@@ -416,10 +416,10 @@ const small = StyleSheet.create({
         borderColor: "#D9D9D9",
         borderBottomWidth: 1,
         alignSelf: "center",
-        marginBottom: hp(10),
+        marginBottom: hp(7),
     },
     customStyle: {
-        height: hp(52),
+        height: hp(50),
     },
     placeHolder: {
         width: "100%",
@@ -427,9 +427,6 @@ const small = StyleSheet.create({
         alignSelf: "center",
         borderRadius: 10,
         backgroundColor: "#D9D9D9",
-    },
-    sectionHeader: {
-
     },
 });
 const medium = StyleSheet.create({

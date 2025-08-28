@@ -5,7 +5,7 @@ import { HelloWave } from "@/components/HelloWave";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 import { handleContact } from "../services/contact";
 
-export const XSmallUI = () => {
+export default function XSmallUI() {
     return (
     <LinearGradient
         colors={["#BDAC47", "#9D2B27"]}
@@ -19,8 +19,7 @@ export const XSmallUI = () => {
             KET STORE <HelloWave />
             </Text>
             <Text style={small.addressingInfo}>
-            Before we start, kindly contact the CEO for sign up access pin with
-            link below
+            Contact us with the WhatsApp link below for sign up access pin
             </Text>
             <TouchableOpacity style={small.link} onPress={handleContact}>
             WhatsApp link here
@@ -58,8 +57,7 @@ export const SmallUI = () => {
             KET STORE <HelloWave />
             </Text>
             <Text style={small.addressingInfo}>
-            Before we start, kindly contact the CEO for sign up access pin with
-            link below
+            Contact us with the WhatsApp link below for sign up access pin
             </Text>
             <TouchableOpacity style={small.link} onPress={handleContact}>
             WhatsApp link here
@@ -97,8 +95,7 @@ export const MediumUI = () => {
             KET STORE <HelloWave />
             </Text>
             <Text style={medium.addressingInfo}>
-            Before we start, kindly contact the CEO for sign up access pin with
-            link below
+            Contact us with the WhatsApp link below for sign up access pin
             </Text>
             <TouchableOpacity style={medium.link} onPress={handleContact}>
             WhatsApp link here
@@ -121,7 +118,7 @@ export const MediumUI = () => {
         </ScrollView>
     </LinearGradient>
         );
-    };
+};
 export const LargeUI = () => {
     return (
     <LinearGradient
@@ -136,15 +133,13 @@ export const LargeUI = () => {
             KET STORE <HelloWave />
             </Text>
             <Text style={large.addressingInfo}>
-            Before we start, kindly contact the CEO for sign up access pin with
-            link below
+            Contact us with the WhatsApp link below for sign up access pin
             </Text>
             <TouchableOpacity style={large.link} onPress={handleContact}>
             WhatsApp link here
             </TouchableOpacity>
             <Text style={large.addressing}>Do you have the pin already?</Text>
             <TextInput placeholder="Enter pin" style={large.input} />
-
             <Link href="/signup" asChild>
             <Pressable style={large.button}>
                 <Text style={large.buttonText}>Continue</Text>
@@ -247,7 +242,7 @@ const small = StyleSheet.create({
     },
     addressing: {
         color: "white",
-        fontSize: 17,
+        fontSize: wp(4.4),
         alignSelf: "center",
         fontWeight: "100",
         fontFamily: "sans-serif",
@@ -259,7 +254,10 @@ const small = StyleSheet.create({
         alignSelf: "center",
         fontWeight: "700",
         fontFamily: "sans-serif",
-        paddingBottom: 10,
+        padding: 4,
+        // borderWidth: 1,
+        // borderRadius: 5,
+        justifyContent: "center",
     },
 
     addressingInfo: {
@@ -273,7 +271,7 @@ const small = StyleSheet.create({
         borderColor: "black",
         backgroundColor: "white",
         padding: 10,
-        width: "80%",
+        width: "90%",
         marginTop: 10,
         marginBottom: 20,
         borderRadius: 6,
@@ -284,11 +282,11 @@ const small = StyleSheet.create({
         borderRadius: 10,
         marginTop: 10,
         width: "50%",
-        height: "9%",
+        height: "10%",
         justifyContent: "center",
         alignItems: "center",
         alignSelf: "center",
-        marginBottom: 40,
+        marginBottom: 20,
     },
     buttonlarge: {
         backgroundColor: "black",
@@ -307,7 +305,7 @@ const small = StyleSheet.create({
     },
     addressTag: {
         color: "white",
-        fontSize: 12,
+        fontSize: wp(3),
         alignSelf: "center",
         marginTop: "5%",
         fontWeight: "900",

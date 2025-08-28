@@ -1,6 +1,6 @@
 import React from "react";
 import { View, useWindowDimensions } from "react-native";
-import { XSmallUI, SmallUI, MediumUI, LargeUI, XLargeUI } from "../UI/signUpUI.jsx";
+import XSmallUI, { SmallUI, MediumUI, LargeUI, XLargeUI } from "../UI/signUpUI.jsx";
 
 export default function SignUpScreen() {
   const { width } = useWindowDimensions();

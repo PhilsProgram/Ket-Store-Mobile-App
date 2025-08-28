@@ -7,7 +7,7 @@ import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { Link } from "expo-router";
 
 //  Checking if the device of the screen is very small
-export const XSmallUI = () => {
+export default function XSmallUI() {
   const renderCategory = (linking, title) => (
   <Link href={linking} asChild>
     <TouchableOpacity style={xsmall.categoryContainer}>
@@ -43,7 +43,7 @@ export const XSmallUI = () => {
     </SafeAreaProvider>
   );
 };
-export const SmallUI = () => {
+const SmallUI = () => {
   const renderCategory = (linking, title) => (
   <Link href={linking} asChild>
     <TouchableOpacity style={small.categoryContainer}>
@@ -84,7 +84,7 @@ export const SmallUI = () => {
     </SafeAreaProvider>
   );
 };
-export const MediumUI = () => {
+const MediumUI = () => {
   const renderCategory = (linking, title) => (
   <Link href={linking} asChild>
     <TouchableOpacity style={medium.categoryContainer}>
@@ -125,7 +125,7 @@ export const MediumUI = () => {
     </SafeAreaProvider>
   );
 };
-export const LargeUI = () => {
+const LargeUI = () => {
   const renderCategory = (linking, title) => (
   <Link href={linking} asChild>
     <TouchableOpacity style={large.categoryContainer}>
@@ -159,7 +159,7 @@ export const LargeUI = () => {
     </SafeAreaProvider>
   );
 };
-export const XLargeUI = () => {
+const XLargeUI = () => {
   const renderCategory = (linking, title) => (
   <Link href={linking} asChild>
     <TouchableOpacity style={xlarge.categoryContainer}>
@@ -489,3 +489,4 @@ const xlarge = StyleSheet.create({
   },
 });
 // ----------------------------------------------------------    Shop page    -------------------------------------------------------------------------------
+export { SmallUI, MediumUI, LargeUI, XLargeUI };

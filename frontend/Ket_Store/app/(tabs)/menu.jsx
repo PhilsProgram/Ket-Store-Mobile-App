@@ -20,7 +20,7 @@ export default function SettingsScreen() {
     <SafeAreaProvider>
       <SafeAreaView style={{flex: 1}}>
     <View style={styles.container}>
-      <HeaderNav title="Menu" img="bars"/>
+      <HeaderNav title="More" img="bars"/>
 
       <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
       {SETTINGS_OPTIONS.map((item) => (
@@ -50,22 +50,20 @@ export default function SettingsScreen() {
           <Text style={styles.optionSubtitle}>Clear your details from our database</Text>
         </TouchableOpacity>
       </ScrollView>
-      
     </View>
     <FooterNav/>
     </SafeAreaView>
-    
-    </SafeAreaProvider>
-  );
-}
+  </SafeAreaProvider>
+);
+};
 
 const styles = StyleSheet.create({
   scroll: {
     width: "100%",
-    height: hp(85)
+    height: "auto"
   },
   container: {
-    backgroundColor: "#fff" 
+    backgroundColor: "#fff",
   },
   header: {
     flexDirection: "row",

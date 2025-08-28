@@ -4,7 +4,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, StatusBar
 import { LinearGradient } from "expo-linear-gradient";
 import { Link } from "expo-router";
 
-export const XSmallUI = () => {
+export default function XSmallUI() {
   return (
     <>
       <StatusBar barStyle={"dark-content"} />
@@ -59,7 +59,7 @@ export const XSmallUI = () => {
     </>
   );
 };
-export const SmallUI = () => {
+const SmallUI = () => {
   return (
     <>
       <StatusBar barStyle={"dark-content"} />
@@ -114,7 +114,7 @@ export const SmallUI = () => {
     </>
   );
 };
-export const MediumUI = () => {
+const MediumUI = () => {
   return (
     <>
       <StatusBar barStyle={"dark-content"} />
@@ -169,7 +169,7 @@ export const MediumUI = () => {
     </>
   );
 };
-export const LargeUI = () => {
+const LargeUI = () => {
   return (
     <>
       <StatusBar barStyle={"dark-content"} />
@@ -224,7 +224,7 @@ export const LargeUI = () => {
     </>
   );
 };
-export const XLargeUI = () => {
+const XLargeUI = () => {
   return (
     <>
       <StatusBar barStyle={"dark-content"} />
@@ -295,7 +295,8 @@ const small = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: "bold",
-    marginTop: "30%",
+    marginTop: "25%",
+    marginBottom: "4%",
     color: "#000",
     textShadowColor: "rgba(0, 0, 0, 0.3)",
     textShadowOffset: { width: 1, height: 1 },
@@ -303,20 +304,22 @@ const small = StyleSheet.create({
     textAlign: "center",
   },
   input: {
-    width: "80%",
+    width: "90%",
     height: 50,
     backgroundColor: "#D9D9D9",
     borderRadius: 10,
     paddingHorizontal: 15,
-    marginBottom: 25,
-    fontSize: 17,
+    marginTop: 5,
+    marginBottom: 5,
+    fontSize: 15,
   },
   warningText: {
     color: "#A52A2A",
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 10,
-    fontSize: 17,
+    fontSize: 15,
+    marginVertical: 5
   },
   button: {
     backgroundColor: "#D9D9D9",
@@ -324,6 +327,7 @@ const small = StyleSheet.create({
     paddingHorizontal: 40,
     borderRadius: 10,
     marginBottom: 15,
+    boxShadow: "0 10px 6px rgba(0, 0, 0, 0.1)"
   },
   buttonText: {
     fontSize: 18,
@@ -432,3 +436,5 @@ const large = StyleSheet.create({
     color: "#000",
   },
 });
+
+export { SmallUI, MediumUI, LargeUI, XLargeUI };

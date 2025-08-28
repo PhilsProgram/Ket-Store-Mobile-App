@@ -1,6 +1,6 @@
 import React from "react";
 import { View, useWindowDimensions } from "react-native";
-import { XSmallUI, SmallUI, MediumUI, LargeUI, XLargeUI } from "../UI/homeUI";
+import SmallUI, { XSmallUI, MediumUI, LargeUI, XLargeUI } from "../UI/homeUI";
 
 export default function HomeScreen() {
   const { width } = useWindowDimensions();

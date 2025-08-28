@@ -1,6 +1,6 @@
 import React from "react";
 import { View, useWindowDimensions } from "react-native";
-import { XSmallUI, SmallUI, MediumUI, LargeUI, XLargeUI } from "../UI/shopUI.jsx";
+import XSmallUI, { SmallUI, MediumUI, LargeUI, XLargeUI } from "../UI/shopUI.jsx";
 
 export default function ShopScreen() {
   const { width } = useWindowDimensions();

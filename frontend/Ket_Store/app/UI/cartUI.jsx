@@ -1,112 +1,183 @@
 import React from "react";
 import { SafeAreaView, View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import FooterNav from "../navigations/footerNav";
-import HeaderNav from "../navigations/HeaderNav";
+import XSmallUIHeaderNav, { LargeUIHeaderNav,MediumUIHeaderNav,SmallUIHeaderNav,XLargeUIHeaderNav } from "../navigations/HeaderNav";
 import SettingsFooter from "../navigations/settingsfooter";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const items = [
-  { id: "1", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "2", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "3", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "5", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "6", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "7", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "8", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "9", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "10", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "11", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "12", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" },
-  { id: "13", name: "Wooden Hair brush", unit: "GH₵ 200.00", qty: "10 packs", price: "2,000" }
+  {
+    id: "1",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "2",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "3",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "5",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "6",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "7",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "8",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "9",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "10",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "11",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "12",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
+  {
+    id: "13",
+    name: "Wooden Hair brush",
+    unit: "GH₵ 200.00",
+    qty: "10 packs",
+    price: "2,000",
+  },
 ];
 
-const Orders = ({item}) => {
-  while ( item ) {
+const Orders = ({ item }) => {
+  while (item) {
     <View style={styles.itemContainer}>
-    <View style={styles.imagePlaceholder}>
-      <Text style={styles.priceTag}>{item.unit}</Text>
-    </View>
-    <View style={styles.itemDetails}>
-      <Text style={styles.itemName}>
-        Item: <Text style={styles.boldText}>{item.name}</Text>
-      </Text>
-      <Text style={styles.itemQty}>
-        Qnty: <Text style={styles.boldText}>{item.qty}</Text>
-      </Text>
-    </View>
-    <View style={styles.bulkPrice}><Text style={styles.bulkPriceText}>{item.price}</Text></View>
-  </View>
+      <View style={styles.imagePlaceholder}>
+        <Text style={styles.priceTag}>{item.unit}</Text>
+      </View>
+      <View style={styles.itemDetails}>
+        <Text style={styles.itemName}>
+          Item: <Text style={styles.boldText}>{item.name}</Text>
+        </Text>
+        <Text style={styles.itemQty}>
+          Qnty: <Text style={styles.boldText}>{item.qty}</Text>
+        </Text>
+      </View>
+      <View style={styles.bulkPrice}>
+        <Text style={styles.bulkPriceText}>{item.price}</Text>
+      </View>
+    </View>;
   }
-}
+};
 
-export const XSmallUI = () => {
+const XSmallUI = () => {
   return (
-    <SafeAreaView style={small.container}>
-      <HeaderNav title="Cart" img="shopping-cart"/>
-      <ScrollView>
-        {Orders(items)}
-      </ScrollView>
-      <SettingsFooter item={"Place Order"} style={small.orderButton}/>
-      <FooterNav/>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={small.container}>
+        <XSmallUIHeaderNav title="Cart" img="shopping-cart" />
+        <ScrollView>{Orders(items)}</ScrollView>
+        <SettingsFooter item={"Place Order"} style={small.orderButton}/>
+        <FooterNav />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
-export const SmallUI = () => {
+const SmallUI = () => {
   return (
-    <SafeAreaView style={small.container}>
-      
-    <HeaderNav title="Cart" img="shopping-cart"/>
-      <ScrollView>
-        {Orders(items)}
-      </ScrollView>
-      <SettingsFooter item={"Place Order"} style={small.orderButton}/>
-      <FooterNav/>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={small.container}>
+        <SmallUIHeaderNav title="Cart" img="shopping-cart" />
+        <ScrollView>{Orders(items)}</ScrollView>
+        <SettingsFooter item={"Place Order"} style={small.orderButton} />
+        <FooterNav />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
-export const MediumUI = () => {
+const MediumUI = () => {
   return (
-    <SafeAreaView style={medium.container}>
-      
-    <HeaderNav title="Cart" img="shopping-cart"/>
-      <ScrollView>
-        {Orders(items)}
-      </ScrollView>
-      <SettingsFooter item={"Place Order"} style={medium.orderButton}/>
-      <FooterNav/>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={medium.container}>
+        <MediumUIHeaderNav title="Cart" img="shopping-cart" />
+        <ScrollView>{Orders(items)}</ScrollView>
+        <SettingsFooter item={"Place Order"} style={medium.orderButton} />
+        <FooterNav />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
-export const LargeUI = () => {
+const LargeUI = () => {
   return (
-    <SafeAreaView style={large.container}>
-      
-    <HeaderNav title="Cart" img="shopping-cart"/>
-      <ScrollView>
-        {Orders(items)}
-      </ScrollView>
-      <SettingsFooter item={"Place Order"} style={large.orderButton}/>
-      <FooterNav/>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={large.container}>
+        <LargeUIHeaderNav title="Cart" img="shopping-cart" />
+        <ScrollView>{Orders(items)}</ScrollView>
+        <SettingsFooter item={"Place Order"} style={large.orderButton} />
+        <FooterNav />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
-export const XLargeUI = () => {
+const XLargeUI = () => {
   return (
-    <SafeAreaView style={large.container}>
-      
-    <HeaderNav title="Cart" img="shopping-cart"/>
-      <ScrollView>
-        {Orders(items)}
-      </ScrollView>
-      <SettingsFooter item={"Place Order"} style={large.orderButton}/>
-      <FooterNav/>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={large.container}>
+        <XLargeUIHeaderNav title="Cart" img="shopping-cart" />
+        <ScrollView>{Orders(items)}</ScrollView>
+        <SettingsFooter item={"Place Order"} style={large.orderButton} />
+        <FooterNav />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
 const small = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: "#fff" 
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
   },
   itemContainer: {
     flexDirection: "row",
@@ -114,7 +185,7 @@ const small = StyleSheet.create({
     padding: 15,
     borderBottomWidth: 1,
     borderColor: "#ddd",
-    height: 150,
+    height: 1 + 50,
   },
   imagePlaceholder: {
     width: 110,
@@ -131,19 +202,19 @@ const small = StyleSheet.create({
     borderRadius: 5,
     fontSize: 12,
   },
-  itemDetails: { 
-    marginLeft: 15 
+  itemDetails: {
+    marginLeft: 15,
   },
-  itemName: { 
-    color: "gray", 
-    fontSize: 15 
+  itemName: {
+    color: "gray",
+    fontSize: 15,
   },
-  itemQty: { 
-    color: "gray", 
-    fontSize: 14 
+  itemQty: {
+    color: "gray",
+    fontSize: 14,
   },
-  boldText: { 
-    fontWeight: "bold" 
+  boldText: {
+    fontWeight: "bold",
   },
   bulkPrice: {
     borderColor: "#9D2B27",
@@ -151,23 +222,22 @@ const small = StyleSheet.create({
     width: 100,
     marginTop: "20%",
     borderRadius: 10,
-    alignItems: "center"
+    alignItems: "center",
   },
   bulkPriceText: {
     color: "#9D2B27",
-    fontSize: 18
+    fontSize: 18,
   },
   removeItem: {
     position: "absolute",
     right: "-45%",
-    top: "-15%"
+    top: "-15%",
   },
-  
 });
 const medium = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: "#fff" 
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
   },
   itemContainer: {
     flexDirection: "row",
@@ -192,19 +262,19 @@ const medium = StyleSheet.create({
     borderRadius: 5,
     fontSize: 12,
   },
-  itemDetails: { 
-    marginLeft: 15 
+  itemDetails: {
+    marginLeft: 15,
   },
-  itemName: { 
-    color: "gray", 
-    fontSize: 15 
+  itemName: {
+    color: "gray",
+    fontSize: 15,
   },
-  itemQty: { 
-    color: "gray", 
-    fontSize: 14 
+  itemQty: {
+    color: "gray",
+    fontSize: 14,
   },
-  boldText: { 
-    fontWeight: "bold" 
+  boldText: {
+    fontWeight: "bold",
   },
   bulkPrice: {
     borderColor: "#9D2B27",
@@ -212,23 +282,22 @@ const medium = StyleSheet.create({
     width: 100,
     marginTop: "20%",
     borderRadius: 10,
-    alignItems: "center"
+    alignItems: "center",
   },
   bulkPriceText: {
     color: "#9D2B27",
-    fontSize: 18
+    fontSize: 18,
   },
   removeItem: {
     position: "absolute",
     right: "-45%",
-    top: "-15%"
+    top: "-15%",
   },
-  
 });
 const large = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: "#fff" 
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
   },
   itemContainer: {
     flexDirection: "row",
@@ -253,19 +322,19 @@ const large = StyleSheet.create({
     borderRadius: 5,
     fontSize: 12,
   },
-  itemDetails: { 
-    marginLeft: 15 
+  itemDetails: {
+    marginLeft: 15,
   },
-  itemName: { 
-    color: "gray", 
-    fontSize: 15 
+  itemName: {
+    color: "gray",
+    fontSize: 15,
   },
-  itemQty: { 
-    color: "gray", 
-    fontSize: 14 
+  itemQty: {
+    color: "gray",
+    fontSize: 14,
   },
-  boldText: { 
-    fontWeight: "bold" 
+  boldText: {
+    fontWeight: "bold",
   },
   bulkPrice: {
     borderColor: "#9D2B27",
@@ -273,18 +342,18 @@ const large = StyleSheet.create({
     width: 100,
     marginTop: "20%",
     borderRadius: 10,
-    alignItems: "center"
+    alignItems: "center",
   },
   bulkPriceText: {
     color: "#9D2B27",
-    fontSize: 18
+    fontSize: 18,
   },
   removeItem: {
     position: "absolute",
     right: "-45%",
-    top: "-15%"
+    top: "-15%",
   },
-  
 });
 
 // export default CartScreen;
+export { XSmallUI, SmallUI, MediumUI, LargeUI, XLargeUI };
