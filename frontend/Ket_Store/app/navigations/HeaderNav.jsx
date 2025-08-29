@@ -219,7 +219,7 @@ const small = StyleSheet.create({
     position: "relative",
     justifyContent: "space-between",
     height: StatusBar.currentHeight,
-    marginTop: 20,
+    marginTop: 10,
     // borderWidth: 1,
     // borderColor: "black",
     width: "100%",

@@ -1,7 +1,7 @@
 import { View, useWindowDimensions } from "react-native";
-import XSmallUI, { SmallUI, MediumUI, LargeUI, XLargeUI } from "../UI/footerNavUI.jsx";
+import XSmallUI, { SmallUI, MediumUI, LargeUI, XLargeUI } from "../UI/moreUI.jsx";
 
-export default function FooterNav() {
+export default function MenuScreen() {
   const { width } = useWindowDimensions();
   return (
     <View style={{ flex: 1 }}>
@@ -12,4 +12,4 @@ export default function FooterNav() {
       {width >= 900 && <XLargeUI />}
     </View>
   );
-};
+}
