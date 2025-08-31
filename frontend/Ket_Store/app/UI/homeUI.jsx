@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, ScrollView, Dimensions } from "react-native";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import FooterNav from "../navigations/footerNav.jsx";
-import HeaderNav from "../navigations/HeaderNav.jsx";
+import HeaderNav from "../UI/headerNavUI.jsx";
+import CarouselComponentAuto from "./slide/carousel.jsx";
 
 export function XSmallUI() {
   // checking whether it is a phone or a tablet
@@ -39,7 +40,9 @@ export function XSmallUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={small.placeHolder}></View>
+                <View style={small.placeHolder}>
+                    <CarouselComponentAuto />
+                </View>
             </View>
 
             {/* Best sellers section */}
@@ -56,7 +59,8 @@ export function XSmallUI() {
                 >
                 New Arrivals
                 </Text>
-                <View style={small.placeHolder}></View>
+                <View style={small.placeHolder}>
+                </View>
             </View>
 
             {/* New arrivals section */}
@@ -118,7 +122,9 @@ export default function SmallUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={small.placeHolder}></View>
+                <View style={small.placeHolder}>
+                    <CarouselComponentAuto />
+                </View>
             </View>
 
             {/* Best sellers section */}
@@ -135,7 +141,9 @@ export default function SmallUI() {
                 >
                 New Arrivals
                 </Text>
-                <View style={small.placeHolder}></View>
+                <View style={small.placeHolder}>
+                    
+                </View>
             </View>
 
             {/* New arrivals section */}
@@ -152,7 +160,9 @@ export default function SmallUI() {
                 >
                 Categories
                 </Text>
-                <View style={small.placeHolder}></View>
+                <View style={small.placeHolder}>
+                    
+                </View>
             </View>
             </ScrollView>
 
@@ -416,17 +426,17 @@ const small = StyleSheet.create({
         borderColor: "#D9D9D9",
         borderBottomWidth: 1,
         alignSelf: "center",
-        marginBottom: hp(7),
+        marginBottom: hp(10),
     },
     customStyle: {
-        height: hp(50),
+        height: hp(45),
     },
     placeHolder: {
         width: "100%",
-        height: hp(40),
+        height: hp(35),
         alignSelf: "center",
         borderRadius: 10,
-        backgroundColor: "#D9D9D9",
+        backgroundColor: "#f4f2f2ff",
     },
 });
 const medium = StyleSheet.create({

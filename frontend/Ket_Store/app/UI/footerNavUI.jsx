@@ -37,7 +37,7 @@ export default function XSmallUI() {
         linking="/welcome"
         nav1={small.navItem}
         nav2={small.navText}
-        is={20}
+        is={19}
       />
       <NavItem
         icon="shopping-bag"
@@ -45,7 +45,7 @@ export default function XSmallUI() {
         linking="/shop"
         nav1={small.navItem}
         nav2={small.navText}
-        is={20}
+        is={19}
       />
       <NavItem
         icon="shopping-cart"
@@ -53,7 +53,7 @@ export default function XSmallUI() {
         linking="/cart"
         nav1={small.navItem}
         nav2={small.navText}
-        is={20}
+        is={19}
       />
       <NavItem
         icon="bars"
@@ -61,7 +61,7 @@ export default function XSmallUI() {
         linking="/more"
         nav1={small.navItem}
         nav2={small.navText}
-        is={20}
+        is={19}
       />
     </View>
   );
@@ -226,7 +226,7 @@ const small = StyleSheet.create({
   },
   navText: {
     color: "#fff",
-    fontSize: 18,
+    fontSize: 17,
     marginTop: 5,
   },
   bottomNav: {
@@ -235,10 +235,10 @@ const small = StyleSheet.create({
     justifyContent: "space-around",
     backgroundColor: "#9D2B27",
     padding: 5,
-    bottom: hp(-1),
+    bottom: hp(-0.5),
     width: "100%",
     alignItems: "center",
-    height: hp(12),
+    height: hp(11.5),
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
   },
@@ -253,7 +253,7 @@ const small = StyleSheet.create({
   inActive: {
     opacity: 0.8,
     paddingTop: 25,
-  },
+  }
 });
 const medium = StyleSheet.create({
   navItem: {

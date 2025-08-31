@@ -203,6 +203,7 @@ const XLargeUI = () => {
 const xsmall = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white"
   },
 
   contentContainer: {
@@ -254,8 +255,6 @@ const xsmall = StyleSheet.create({
   },
 
   inner: {
-    borderColor: "black",
-    borderWidth: 1,
     borderRadius: 15,
     height: "100%",
     width: "100%",
@@ -313,8 +312,6 @@ const small = StyleSheet.create({
   },
 
   inner: {
-    borderColor: "black",
-    borderWidth: 1,
     borderRadius: 15,
     height: "100%",
     width: "48%",
@@ -372,8 +369,6 @@ const medium = StyleSheet.create({
   },
 
   inner: {
-    borderColor: "black",
-    borderWidth: 1,
     borderRadius: 15,
     height: "100%",
     width: "48%",

@@ -51,7 +51,7 @@ const SETTINGS_OPTIONS = [
 
 export default function XSmallUI() {
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider style={{flex: 1, backgroundColor: "white"}}>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={small.container}>
           <HeaderNav title="More" img="bars" />
@@ -433,7 +433,7 @@ export const XLargeUI = () => {
 const small = StyleSheet.create({
   scroll: {
     width: "100%",
-    height: "auto",
+    height: hp(80),
   },
   container: {
     backgroundColor: "#fff",
@@ -452,7 +452,7 @@ const small = StyleSheet.create({
   },
   optionContainer: {
     padding: 15,
-    height: 90,
+    height: 85,
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",
   },
