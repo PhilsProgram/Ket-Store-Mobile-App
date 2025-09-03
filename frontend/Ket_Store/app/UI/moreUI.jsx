@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import FooterNav from "../navigations/footerNav";
-import HeaderNav from "../navigations/HeaderNav";
+import XSmallUIHeaderNav, { SmallUIHeaderNav, MediumUIHeaderNav, LargeUIHeaderNav, XLargeUIHeaderNav } from "./headerNavUI.jsx";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -54,7 +54,7 @@ export default function XSmallUI() {
     <SafeAreaProvider style={{flex: 1, backgroundColor: "white"}}>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={small.container}>
-          <HeaderNav title="More" img="bars" />
+          <XSmallUIHeaderNav title="More" img="bars" />
 
           <ScrollView style={small.scroll} showsVerticalScrollIndicator={false}>
             {SETTINGS_OPTIONS.map((item) => (
@@ -129,7 +129,7 @@ export const SmallUI = () => {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={small.container}>
-          <HeaderNav title="More" img="bars" />
+          <SmallUIHeaderNav title="More" img="bars" />
 
           <ScrollView style={small.scroll} showsVerticalScrollIndicator={false}>
             {SETTINGS_OPTIONS.map((item) => (
@@ -204,7 +204,7 @@ export const MediumUI = () => {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={medium.container}>
-          <HeaderNav title="More" img="bars" />
+          <MediumUIHeaderNav title="More" img="bars" />
 
           <ScrollView
             style={medium.scroll}
@@ -284,7 +284,7 @@ export const LargeUI = () => {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={large.container}>
-          <HeaderNav title="More" img="bars" />
+          <LargeUIHeaderNav title="More" img="bars" />
 
           <ScrollView style={large.scroll} showsVerticalScrollIndicator={false}>
             {SETTINGS_OPTIONS.map((item) => (
@@ -359,7 +359,7 @@ export const XLargeUI = () => {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={large.container}>
-          <HeaderNav title="More" img="bars" />
+          <XLargeUIHeaderNav title="More" img="bars" />
 
           <ScrollView style={large.scroll} showsVerticalScrollIndicator={false}>
             {SETTINGS_OPTIONS.map((item) => (

@@ -2,22 +2,19 @@ import React from "react";
 import { View, Text, ScrollView, StyleSheet, Pressable, TouchableOpacity } from "react-native";
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from "react-native-responsive-screen";
 import FooterNav from "../navigations/footerNav.jsx";
-import HeaderNav from "../navigations/HeaderNav.jsx";
+import XSmallUIheaderNav, { SmallUIHeaderNav, MediumUIHeaderNav, LargeUIHeaderNav, XLargeUIHeaderNav } from "./headerNavUI.jsx"
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { Link } from "expo-router";
+import { CarouselComponentCombs, CarouselComponentMirror, CarouselComponentPegs} from "./slide/carousel.jsx";
 
 //  Checking if the device of the screen is very small
 export default function XSmallUI() {
-  const renderCategory = (linking, title) => (
+  const renderCategory = (linking, title, item) => (
   <Link href={linking} asChild>
     <TouchableOpacity style={xsmall.categoryContainer}>
       <Text style={xsmall.categoryTitle}>{title}</Text>
       <View style={xsmall.card}>
-        <View style={xsmall.inner}>
-          <Pressable style={xsmall.button}>
-            <Text style={xsmall.buttonText}>Buy</Text>
-          </Pressable>
-        </View>
+        {item}
       </View>
     </TouchableOpacity>
   </Link>
@@ -27,15 +24,15 @@ export default function XSmallUI() {
       <SafeAreaView style={{ flex: 1 }}>
         <View style={xsmall.container}>
           {/* Header */}
-          <HeaderNav title="Shop" img="shopping-bag" />
+          <XSmallUIheaderNav title="Shop" img="shopping-bag" />
           {/* Scrollable Content */}
           <ScrollView
             contentContainerStyle={xsmall.contentContainer}
             showsVerticalScrollIndicator={false}
           >
-            {renderCategory("/shopping/combs", "Combs")}
-            {renderCategory("/shopping/pegs", "Pegs")}
-            {renderCategory("/shopping/mirror", "Mirror")}
+            {renderCategory("/shopping/combs", "Combs", <CarouselComponentCombs />)}
+            {renderCategory("/shopping/pegs", "Pegs", <CarouselComponentPegs />)}
+            {renderCategory("/shopping/mirror", "Mirror", <CarouselComponentMirror />)}
           </ScrollView>
           <FooterNav />
         </View>
@@ -68,7 +65,7 @@ const SmallUI = () => {
       <SafeAreaView style={{ flex: 1 }}>
         <View style={small.container}>
           {/* Header */}
-          <HeaderNav title="Shop" img="shopping-bag" />
+          <SmallUIHeaderNav title="Shop" img="shopping-bag" />
           {/* Scrollable Content */}
           <ScrollView
             contentContainerStyle={small.contentContainer}
@@ -109,7 +106,7 @@ const MediumUI = () => {
       <SafeAreaView style={{ flex: 1 }}>
         <View style={medium.container}>
           {/* Header */}
-          <HeaderNav title="Shop" img="shopping-bag" />
+          <MediumUIHeaderNav title="Shop" img="shopping-bag" />
           {/* Scrollable Content */}
           <ScrollView
             contentContainerStyle={medium.contentContainer}
@@ -143,7 +140,7 @@ const LargeUI = () => {
       <SafeAreaView style={{ flex: 1 }}>
         <View style={large.container}>
           {/* Header */}
-          <HeaderNav title="Shop" img="shopping-bag" />
+          <LargeUIHeaderNav title="Shop" img="shopping-bag" />
           {/* Scrollable Content */}
           <ScrollView
             contentContainerStyle={large.contentContainer}
@@ -183,7 +180,7 @@ const XLargeUI = () => {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={xlarge.container}>
-          <HeaderNav title="Shop" img="shopping-bag" />
+          <XLargeUIHeaderNav title="Shop" img="shopping-bag" />
           <ScrollView
             contentContainerStyle={xlarge.contentContainer}
             showsVerticalScrollIndicator={false}
@@ -225,12 +222,14 @@ const xsmall = StyleSheet.create({
   },
 
   card: {
-    backgroundColor: "#D3D3D3",
+    // backgroundColor: "#D3D3D3",
     borderRadius: 10,
     alignItems: "center",
     height: "100%",
     flexDirection: "row",
     justifyContent: "space-between",
+    borderTopWidth: 1,
+    borderTopColor: "#D3D3D3",
   },
 
   button: {
@@ -285,7 +284,7 @@ const small = StyleSheet.create({
   },
 
   card: {
-    backgroundColor: "#D3D3D3",
+    backgroundColor: "green",
     borderRadius: 10,
     alignItems: "center",
     height: "100%",
@@ -315,7 +314,7 @@ const small = StyleSheet.create({
     borderRadius: 15,
     height: "100%",
     width: "48%",
-    paddingTop: "30%",
+    paddingTop: "30%"
   },
 });
 const medium = StyleSheet.create({

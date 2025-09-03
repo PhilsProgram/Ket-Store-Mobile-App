@@ -436,7 +436,7 @@ const small = StyleSheet.create({
         height: hp(35),
         alignSelf: "center",
         borderRadius: 10,
-        backgroundColor: "#f4f2f2ff",
+        // backgroundColor: "#f4f2f2ff",
     },
 });
 const medium = StyleSheet.create({
@@ -463,7 +463,7 @@ const medium = StyleSheet.create({
         height: hp(40),
         alignSelf: "center",
         borderRadius: 10,
-        backgroundColor: "#D9D9D9",
+        // backgroundColor: "#D9D9D9",
     },
     sectionHeader: {
 
@@ -493,7 +493,7 @@ const large = StyleSheet.create({
         height: hp(40),
         alignSelf: "center",
         borderRadius: 10,
-        backgroundColor: "#D9D9D9",
+        // backgroundColor: "#D9D9D9",
     },
     sectionHeader: {
 

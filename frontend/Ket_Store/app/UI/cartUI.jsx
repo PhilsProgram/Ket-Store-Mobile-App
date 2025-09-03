@@ -1,116 +1,41 @@
 import React from "react";
 import { SafeAreaView, View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import FooterNav from "../navigations/footerNav";
-import XSmallUIHeaderNav, { LargeUIHeaderNav,MediumUIHeaderNav,SmallUIHeaderNav,XLargeUIHeaderNav } from "../navigations/HeaderNav";
+import XSmallUIHeaderNav, { LargeUIHeaderNav,MediumUIHeaderNav,SmallUIHeaderNav,XLargeUIHeaderNav } from "./headerNavUI.jsx";
 import SettingsFooter from "../navigations/settingsfooter";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
-const items = [
-  {
-    id: "1",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "2",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "3",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "5",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "6",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "7",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "8",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "9",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "10",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "11",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "12",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-  {
-    id: "13",
-    name: "Wooden Hair brush",
-    unit: "GH₵ 200.00",
-    qty: "10 packs",
-    price: "2,000",
-  },
-];
+// Sample data for cart items
+const cartItems = [];
 
-const Orders = ({ item }) => {
-  while (item) {
-    <View style={styles.itemContainer}>
-      <View style={styles.imagePlaceholder}>
-        <Text style={styles.priceTag}>{item.unit}</Text>
-      </View>
-      <View style={styles.itemDetails}>
-        <Text style={styles.itemName}>
-          Item: <Text style={styles.boldText}>{item.name}</Text>
-        </Text>
-        <Text style={styles.itemQty}>
-          Qnty: <Text style={styles.boldText}>{item.qty}</Text>
-        </Text>
-      </View>
-      <View style={styles.bulkPrice}>
-        <Text style={styles.bulkPriceText}>{item.price}</Text>
-      </View>
+const Orders = ({ items }) => {
+  if ( items === undefined || items.length === 0 ) {
+    return <View style={small.emptyCartContainer}>
+      <Image source={require("../../assets/images/otherAsset/empty-cart.png")} style={small.emptyCartImage} />
+      <Text style={small.emptyCartText}>All selected orders will be displayed here.</Text></View>;
+  }
+  else{
+    for (let i = 0; i < items.length; i++) {
+      <View style={styles.itemContainer}>
+        <View style={styles.imagePlaceholder}>
+          <Text style={styles.priceTag}>{items[i].unit}</Text>
+        </View>
+        <View style={styles.itemDetails}>
+          <Text style={styles.itemName}>
+            Item: <Text style={styles.boldText}>{items[i].name}</Text>
+          </Text>
+          <Text style={styles.itemQty}>
+            Qnty: <Text style={styles.boldText}>{items[i].qty}</Text>
+          </Text>
+        </View>
+        <View style={styles.bulkPrice}>
+          <Text style={styles.bulkPriceText}>{items[i].price}</Text>
+        </View>
     </View>;
   }
+  <SettingsFooter item={"Place Order"} style={small.orderButton}/>
+}
 };
 
 const XSmallUI = () => {
@@ -118,8 +43,7 @@ const XSmallUI = () => {
     <SafeAreaProvider>
       <SafeAreaView style={small.container}>
         <XSmallUIHeaderNav title="Cart" img="shopping-cart" />
-        <ScrollView>{Orders(items)}</ScrollView>
-        <SettingsFooter item={"Place Order"} style={small.orderButton}/>
+        <ScrollView style={small.scrollView}>{Orders(cartItems)}</ScrollView>
         <FooterNav />
       </SafeAreaView>
     </SafeAreaProvider>
@@ -187,6 +111,12 @@ const small = StyleSheet.create({
     borderColor: "#ddd",
     height: 1 + 50,
   },
+  scrollView: {
+    marginBottom: 5,
+    borderWidth: 1,
+    borderColor: "#ddd",
+    height: "65%",
+  },
   imagePlaceholder: {
     width: 110,
     height: 120,
@@ -232,6 +162,23 @@ const small = StyleSheet.create({
     position: "absolute",
     right: "-45%",
     top: "-15%",
+  },
+  emptyCartImage: {
+    width: wp("100%"),
+    height: hp("40%"),
+    resizeMode: "contain",
+    marginTop: hp("10%"),
+  },
+  emptyCartText: {
+    color: "gray",
+    fontSize: 16,
+    width: wp("80%"),
+    textAlign: "center",
+  },
+  emptyCartContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 const medium = StyleSheet.create({
