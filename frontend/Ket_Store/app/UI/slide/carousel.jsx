@@ -25,6 +25,34 @@ const randomCarouselItems = [
     { id: "20", title: "Old Metal Tail comb", image: images.oldMetalTail },
     { id: "21", title: "One Sided comb", image: images.oneSided },
     { id: "22", title: "Small Hammer comb", image: images.smallHammer },
+    { id: "23", title: "Angela Mirror Big", image: images.angelaMirrorBig },
+    { id: "24", title: "Big Scrubbing Brush", image: images.bigScrubbingBrush },
+    { id: "25", title: "Both Sides comb", image: images.bothSidesComb },
+    { id: "26", title: "CS Pegs", image: images.csPegs },
+    { id: "27", title: "Cutter Set", image: images.cutterSet },
+    { id: "28", title: "DIY Wig Cap 1", image: images.diyWigCap1 },
+    { id: "29", title: "DIY Wig Cap 2", image: images.diyWigCap2 },
+    { id: "30", title: "Ear Cleaner", image: images.earCleaner },
+    { id: "31", title: "Feet Rubber", image: images.feetRubber },
+    { id: "32", title: "Handkerchief Hanger", image: images.handkerchiefHanger },
+    { id: "33", title: "Medium Baby Set comb", image: images.mediumBabySetComb },
+    { id: "34", title: "Metal Feet Rubber", image: images.metalFeetRubber },
+    { id: "35", title: "Mirror and Afro", image: images.mirrorAndAfro },
+    { id: "36", title: "Miss Laureta Small", image: images.missLauretaSmall },
+    { id: "37", title: "Nail Cuticle", image: images.nailCuticle },
+    { id: "38", title: "Pedicure Set", image: images.pedicureSet },
+    { id: "39", title: "Plastic Hair Brush", image: images.plasticHairBrush },
+    { id: "40", title: "Ponny Net", image: images.ponnyNet },
+    { id: "41", title: "Rubber Shoe Brush", image: images.rubberShoeBrush },
+    { id: "42", title: "S Brush", image: images.sBrush },
+    { id: "43", title: "Scissors", image: images.scissors },
+    { id: "44", title: "Shower Cap", image: images.showerCap },
+    { id: "45", title: "Small Scrubbing Brush", image: images.smallScrubbingBrush },
+    { id: "46", title: "Tonging Comb", image: images.tongingComb },
+    { id: "47", title: "Triangle Hole Afro", image: images.triangleHoleAfro },
+    { id: "48", title: "Wig Cap", image: images.wigCap },
+    { id: "49", title: "Wig Cap 1", image: images.wigCap1 },
+    { id: "50", title: "Wooden Hair Brush", image: images.woodenHairBrush }
 ];
 
 export const combsCarouselItems = randomCarouselItems.filter(item => /comb|brush/i.test(item.title))
@@ -32,6 +60,9 @@ export const combsCarouselItems = randomCarouselItems.filter(item => /comb|brush
 export const mirrorCarouselItems = randomCarouselItems.filter(item => /mirror/i.test(item.title))
 
 export const pegsCarouselItems = randomCarouselItems.filter(item => /pegs/i.test(item.title))
+
+export const newArrivals = randomCarouselItems.filter(item => /new/i.test(item.title))
+
 
 export const CarouselComponentAuto = () => {
     return (
@@ -53,7 +84,6 @@ export const CarouselComponentAuto = () => {
     </View>
     );
 };
-
 export const CarouselComponentCombs = () => {
     return (
         <View style={styles.container}>
@@ -72,7 +102,6 @@ export const CarouselComponentCombs = () => {
         </View>
     );
 };
-
 export const CarouselComponentMirror = () => {
     return (
         <View style={styles.container}>
@@ -93,7 +122,6 @@ export const CarouselComponentMirror = () => {
         </View>
     );
 };
-
 export const CarouselComponentPegs = () => {
     return (
         <View style={styles.container}>
@@ -104,6 +132,26 @@ export const CarouselComponentPegs = () => {
                 autoPlay
                 autoPlayInterval={3000}
                 data={pegsCarouselItems}
+                renderItem={({ item }) => (
+                    <View style={styles.item}>
+                        <Image source={item.image} style={styles.image} />
+                        <Text style={styles.title}>{item.title}</Text>
+                    </View>
+                )}
+            />
+        </View>
+    );
+};
+export const CarouselComponentNewArrivals = () => {
+    return (
+        <View style={styles.container}>
+            <Carousel
+                loop
+                width={300}
+                height={290}
+                autoPlay
+                autoPlayInterval={3000}
+                data={newArrivals}
                 renderItem={({ item }) => (
                     <View style={styles.item}>
                         <Image source={item.image} style={styles.image} />
