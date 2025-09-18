@@ -20,14 +20,15 @@ const styles = StyleSheet.create({
         width: "40%",
         borderRadius: 50,
         alignSelf: "center",
-        padding: "0.4%"
+        padding: "2%",
+        marginVertical: "1.5%"
       },
 
       buttonText: {
         textAlign: "center",
         color: "white",
         height: "auto",
-        fontSize: wp(2),
+        fontSize: wp(4.3),
         fontWeight: "bold"
       },
 })

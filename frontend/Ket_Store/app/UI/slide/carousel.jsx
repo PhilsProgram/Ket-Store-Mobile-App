@@ -68,9 +68,34 @@ export const CarouselComponentAuto = () => {
     return (
     <View style={styles.container}>
         <Carousel
+        customAnimation={"fade"}
+        mode="parallax"
+        loop
+        width={700}
+        height={290}
+        autoPlay
+        fadeEnabled={true}
+        scrollAnimationDuration={9000}
+        swipeEnabled={true}
+        autoPlayInterval={3000}
+        data={randomCarouselItems}
+        renderItem={({ item }) => (
+            <View style={styles.item}>
+                <Image source={item.image} style={styles.image} />
+                <Text style={styles.title}>{item.title}</Text>
+            </View>
+        )}
+        />
+    </View>
+    );
+};
+const CarouselComponentAutoSmall = () => {
+    return (
+    <View style={styles.container}>
+        <Carousel
         loop
         width={300}
-        height={290}
+        height={270}
         autoPlay
         autoPlayInterval={3000}
         data={randomCarouselItems}
@@ -111,6 +136,7 @@ export const CarouselComponentMirror = () => {
                 height={290}
                 autoPlay
                 autoPlayInterval={3000}
+                swipeEnabled
                 data={mirrorCarouselItems}
                 renderItem={({ item }) => (
                     <View style={styles.item}>
@@ -130,6 +156,7 @@ export const CarouselComponentPegs = () => {
                 width={300}
                 height={290}
                 autoPlay
+                swipeEnabled
                 autoPlayInterval={3000}
                 data={pegsCarouselItems}
                 renderItem={({ item }) => (
@@ -150,6 +177,7 @@ export const CarouselComponentNewArrivals = () => {
                 width={300}
                 height={290}
                 autoPlay
+                swipeEnabled
                 autoPlayInterval={3000}
                 data={newArrivals}
                 renderItem={({ item }) => (
@@ -168,6 +196,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        // borderWidth: 1,
+        // borderColor: "#a6a056ff",
+        borderRadius: 10,
+        padding: 5,
+        // backgroundColor: "#f5f5dcff",
+        width: "100%",
     },
     item: {
         width: "auto",
@@ -175,10 +209,11 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 10,
+        elevation: 5,
     },
     image: {
         width: "100%",
-        height: "70%",
+        height: "76%",
         borderRadius: 10,
         resizeMode: "contain",
     },
@@ -192,4 +227,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default CarouselComponentAuto;
+export default CarouselComponentAutoSmall;

@@ -4,7 +4,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-nat
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import FooterNav from "../navigations/footerNav.jsx";
 import HeaderNav from "../UI/headerNavUI.jsx";
-import CarouselComponentAuto from "./slide/carousel.jsx";
+import CarouselComponentAutoSmall from "./slide/carousel.jsx";
 
 export function XSmallUI() {
   // checking whether it is a phone or a tablet
@@ -41,7 +41,7 @@ export function XSmallUI() {
                 Trending Sales
                 </Text>
                 <View style={small.placeHolder}>
-                    <CarouselComponentAuto />
+                    <CarouselComponentAutoSmall/>
                 </View>
             </View>
 
@@ -123,7 +123,7 @@ export default function SmallUI() {
                 Trending Sales
                 </Text>
                 <View style={small.placeHolder}>
-                    <CarouselComponentAuto />
+                    <CarouselComponentAutoSmall />
                 </View>
             </View>
 
@@ -207,7 +207,9 @@ export function MediumUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={medium.placeHolder}></View>
+                <View style={medium.placeHolder}>
+                    <CarouselComponentAutoSmall />
+                </View>
             </View>
 
             {/* Best sellers section */}
@@ -224,7 +226,8 @@ export function MediumUI() {
                 >
                 New Arrivals
                 </Text>
-                <View style={medium.placeHolder}></View>
+                <View style={medium.placeHolder}>
+                </View>
             </View>
 
             {/* New arrivals section */}
@@ -241,7 +244,9 @@ export function MediumUI() {
                 >
                 Categories
                 </Text>
-                <View style={medium.placeHolder}></View>
+                <View style={medium.placeHolder}>
+
+                </View>
             </View>
             </ScrollView>
 
@@ -286,7 +291,9 @@ export function LargeUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={large.placeHolder}></View>
+                <View style={large.placeHolder}>
+                    <CarouselComponentAutoSmall />
+                </View>
             </View>
 
             {/* Best sellers section */}
@@ -365,7 +372,9 @@ export  function XLargeUI() {
                 >
                 Trending Sales
                 </Text>
-                <View style={large.placeHolder}></View>
+                <View style={large.placeHolder}>
+                    <CarouselComponentAuto />
+                </View>
             </View>
 
             {/* Best sellers section */}
@@ -480,7 +489,7 @@ const large = StyleSheet.create({
     contentPage: {
         width: "90%",
         borderStyle: "solid",
-        borderColor: "#D9D9D9",
+        borderColor: "#f1ededff",
         borderBottomWidth: 1,
         alignSelf: "center",
         marginBottom: wp(5),

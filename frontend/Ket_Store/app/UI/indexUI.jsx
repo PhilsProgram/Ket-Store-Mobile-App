@@ -255,8 +255,6 @@ const small = StyleSheet.create({
         fontWeight: "700",
         fontFamily: "sans-serif",
         padding: 4,
-        // borderWidth: 1,
-        // borderRadius: 5,
         justifyContent: "center",
     },
 

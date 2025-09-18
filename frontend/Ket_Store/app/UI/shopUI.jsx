@@ -30,9 +30,9 @@ export default function XSmallUI() {
             contentContainerStyle={xsmall.contentContainer}
             showsVerticalScrollIndicator={false}
           >
-            {renderCategory("/shopping/combs", "Combs", <CarouselComponentCombs />)}
-            {renderCategory("/shopping/pegs", "Pegs", <CarouselComponentPegs />)}
-            {renderCategory("/shopping/mirror", "Mirror", <CarouselComponentMirror />)}
+            {renderCategory("/shopping/placeOrder", "Combs", <CarouselComponentCombs />)}
+            {renderCategory("/shopping/placeOrder", "Pegs", <CarouselComponentPegs />)}
+            {renderCategory("/shopping/placeOrder", "Mirror", <CarouselComponentMirror />)}
           </ScrollView>
           <FooterNav />
         </View>
