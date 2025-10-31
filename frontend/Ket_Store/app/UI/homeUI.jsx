@@ -4,7 +4,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-nat
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import FooterNav from "../navigations/footerNav.jsx";
 import HeaderNav from "../UI/headerNavUI.jsx";
-import CarouselComponentAutoSmall from "./slide/carousel.jsx";
+import CarouselComponentAutoSmall, { CarouselComponentNewArrivals, CarouselComponentCategories } from "./slide/carousel.jsx";
 
 export function XSmallUI() {
   // checking whether it is a phone or a tablet
@@ -60,6 +60,7 @@ export function XSmallUI() {
                 New Arrivals
                 </Text>
                 <View style={small.placeHolder}>
+                    <CarouselComponentNewArrivals />
                 </View>
             </View>
 
@@ -77,7 +78,9 @@ export function XSmallUI() {
                 >
                 Categories
                 </Text>
-                <View style={small.placeHolder}></View>
+                <View style={small.placeHolder}>
+                    <CarouselComponentCategories />
+                </View>
             </View>
             </ScrollView>
 
@@ -438,11 +441,11 @@ const small = StyleSheet.create({
         marginBottom: hp(10),
     },
     customStyle: {
-        height: hp(45),
+        height: hp(53),
     },
     placeHolder: {
         width: "100%",
-        height: hp(35),
+        height: hp(40),
         alignSelf: "center",
         borderRadius: 10,
         // backgroundColor: "#f4f2f2ff",

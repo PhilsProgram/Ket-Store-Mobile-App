@@ -210,7 +210,7 @@ const xsmall = StyleSheet.create({
 
   categoryContainer: {
     marginBottom: hp(10),
-    height: hp(35),
+    height: hp(42),
   },
 
   categoryTitle: {

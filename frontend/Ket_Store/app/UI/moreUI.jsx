@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  ScrollView,
-  Alert,
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Alert,
 } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import FooterNav from "../navigations/footerNav";
@@ -31,20 +25,8 @@ const SETTINGS_OPTIONS = [
   },
   {
     index: "3",
-    title: "Wishlist / Favorites",
-    subtitle: "Checkout starred goods to be ordered",
-    link: "/menu/wishlist",
-  },
-  {
-    index: "4",
-    title: "Reports and FAQ",
-    subtitle: "Something went wrong? Let us know",
-    link: "/menu/faq",
-  },
-  {
-    index: "5",
-    title: "Support / Contribute",
-    subtitle: "Help us improve, what do you suggest",
+    title: "Report / Contribute",
+    subtitle: "Help us improve, is there something wrong?",
     link: "/menu/support",
   },
 ];
@@ -452,7 +434,7 @@ const small = StyleSheet.create({
   },
   optionContainer: {
     padding: 15,
-    height: 85,
+    height: 80,
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",
   },
@@ -497,7 +479,7 @@ const medium = StyleSheet.create({
   },
   optionContainer: {
     padding: 15,
-    height: 90,
+    height: 85,
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",
   },
@@ -542,7 +524,7 @@ const large = StyleSheet.create({
   },
   optionContainer: {
     padding: 15,
-    height: 90,
+    height: 85,
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",
   },

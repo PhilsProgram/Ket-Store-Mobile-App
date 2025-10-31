@@ -48,5 +48,10 @@ export const images = {
     triangleHoleAfro: require("../../../assets/images/stocks/triangleHoleAfro.jpeg"),
     wigCap: require("../../../assets/images/stocks/wigCap.webp"),
     wigCap1: require("../../../assets/images/stocks/wigCap1.jpg"),
-    woodenHairBrush: require("../../../assets/images/stocks/woodenHairBrush.jpg")
+    woodenHairBrush: require("../../../assets/images/stocks/woodenHairBrush.jpg"),
+    brushset: require("../../../assets/images/stocks/brushset.jpg"),
+    newfootscrub: require("../../../assets/images/stocks/newfootscrub.webp"),
+    bigHolesStone: require("../../../assets/images/stocks/stone.webp"),
+    smallHolesStone: require("../../../assets/images/stocks/stonee.jpg"),
+    collectiveComb: require("../../../assets/images/stocks/collectiveCombs.jpg"),
 };
