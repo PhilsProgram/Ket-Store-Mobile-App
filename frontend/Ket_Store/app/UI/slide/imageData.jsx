@@ -54,4 +54,8 @@ export const images = {
     bigHolesStone: require("../../../assets/images/stocks/stone.webp"),
     smallHolesStone: require("../../../assets/images/stocks/stonee.jpg"),
     collectiveComb: require("../../../assets/images/stocks/collectiveCombs.jpg"),
+    collectivePegs: require("../../../assets/images/stocks/categoriesPegs.png"),
+    pegs: require("../../../assets/images/stocks/pegs.webp"),
+    mirror: require("../../../assets/images/stocks/categoriesMirror.png"),
+    brushesAndCombs: require("../../../assets/images/stocks/categoriesBrushes.png"),
 };

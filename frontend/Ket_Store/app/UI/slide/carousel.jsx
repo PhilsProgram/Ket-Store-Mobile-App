@@ -58,6 +58,7 @@ const randomCarouselItems = [
   { id: "48", title: "Wig Cap", image: images.wigCap, price: "9.99" },
   { id: "49", title: "Wig Cap 1", image: images.wigCap1, price: "9.99" },
   { id: "50", title: "Wooden Hair Brush", image: images.woodenHairBrush, price: "9.99" },
+  { id: "51", title: "Small Pegs", image: images.pegs, price:"9.99" }
 ];
 // Listing new arrivals
 const newArrivals = [
@@ -65,23 +66,26 @@ const newArrivals = [
     { id: "2", title: "New Foot Scrub", image: images.newfootscrub, price: "9.99"},
     { id: "3", title: "Big Holes Stone", image: images.bigHolesStone, price: "9.99"},
     { id: "4", title: "Small Holes Stone", image: images.smallHolesStone, price: "9.99" },
-]
+];
 // Listing items in categories
 const categories = [
-    { id: "1", title: "Collective Comb", image: images.collectiveComb, price: "9.99"},
+    { id: "1", title: "Combs", image: images.collectiveComb},
+    { id: "2", title: "Pegs", image: images.collectivePegs},
+    { id: "3", title: "Mirrors", image: images.mirror},
+    { id: "4", title: "Brushes & Combs", image: images.brushesAndCombs},
 ];
 
 export const combsCarouselItems = randomCarouselItems.filter((item) =>
   /comb|brush/i.test(item.title)
 );
 
-// export const mirrorCarouselItems = randomCarouselItems.filter((item) =>
-//   /mirror/i.test(item.title)
-// );
+export const mirrorCarouselItems = randomCarouselItems.filter((item) =>
+  /mirror/i.test(item.title)
+);
 
-// export const pegsCarouselItems = randomCarouselItems.filter((item) =>
-//   /pegs/i.test(item.title)
-// );
+export const pegsCarouselItems = randomCarouselItems.filter((item) =>
+  /pegs/i.test(item.title)
+);
 
 // export const CarouselComponentAuto = () => {
 //   return (
@@ -164,15 +168,14 @@ export const CarouselComponentCategories = () => {
             width={300}
             height={270}
             autoPlay
-            autoPlayInterval={3000}
+            autoPlayInterval={10000}
             data={categories}
             renderItem={({ item }) => (
                 <View style={medium.item}>
                 <View style={medium.priceTag}>
-                    <Text style={{ color: "white" }}>₵ {item.price}</Text>
+                    <Text style={{ color: "white",  fontWeight: "bold", fontSize: 18 }}>{item.title}</Text>
                 </View>
                 <Image source={item.image} style={medium.image} />
-                <Text style={medium.title}>{item.title}</Text>
                 </View> 
 
             )}
@@ -181,66 +184,66 @@ export const CarouselComponentCategories = () => {
     );
 };
 
-// export const CarouselComponentCombs = () => {
-//   return (
-//     <View style={styles.container}>
-//       <Carousel
-//         width={300}
-//         height={290}
-//         swipeEnabled
-//         data={combsCarouselItems}
-//         renderItem={({ item }) => (
-//           <View style={styles.item}>
-//             <Image source={item.image} style={styles.image} />
-//             <Text style={styles.title}>{item.title}</Text>
-//           </View>
-//         )}
-//       />
-//     </View>
-//   );
-// };
-// export const CarouselComponentMirror = () => {
-//   return (
-//     <View style={styles.container}>
-//       <Carousel
-//         loop
-//         width={300}
-//         height={290}
-//         autoPlay
-//         autoPlayInterval={3000}
-//         swipeEnabled
-//         data={mirrorCarouselItems}
-//         renderItem={({ item }) => (
-//           <View style={styles.item}>
-//             <Image source={item.image} style={styles.image} />
-//             <Text style={styles.title}>{item.title}</Text>
-//           </View>
-//         )}
-//       />
-//     </View>
-//   );
-// };
-// export const CarouselComponentPegs = () => {
-//   return (
-//     <View style={styles.container}>
-//       <Carousel
-//         loop
-//         width={300}
-//         height={290}
-//         autoPlay
-//         swipeEnabled
-//         autoPlayInterval={3000}
-//         data={pegsCarouselItems}
-//         renderItem={({ item }) => (
-//           <View style={styles.item}>
-//             <Image source={item.image} style={styles.image} />
-//             <Text style={styles.title}>{item.title}</Text>
-//           </View>
-//         )}
-//       />
-//     </View>
-//   );
-// };
+export const CarouselComponentCombs = () => {
+  return (
+    <View style={small.container}>
+      <Carousel
+        width={300}
+        height={290}
+        swipeEnabled
+        data={combsCarouselItems}
+        renderItem={({ item }) => (
+          <View style={small.item}>
+            <Image source={item.image} style={small.image} />
+            <Text style={small.title}>{item.title}</Text>
+          </View>
+        )}
+      />
+    </View>
+  );
+};
+export const CarouselComponentMirror = () => {
+  return (
+    <View style={small.container}>
+      <Carousel
+        loop
+        width={300}
+        height={290}
+        autoPlay
+        autoPlayInterval={3000}
+        swipeEnabled
+        data={mirrorCarouselItems}
+        renderItem={({ item }) => (
+          <View style={small.item}>
+            <Image source={item.image} style={small.image} />
+            <Text style={small.title}>{item.title}</Text>
+          </View>
+        )}
+      />
+    </View>
+  );
+};
+export const CarouselComponentPegs = () => {
+  return (
+    <View style={small.container}>
+      <Carousel
+        loop
+        width={300}
+        height={290}
+        autoPlay
+        swipeEnabled
+        autoPlayInterval={3000}
+        data={pegsCarouselItems}
+        renderItem={({ item }) => (
+          <View style={small.item}>
+            <Image source={item.image} style={small.image} />
+            <Text style={small.title}>{item.title}</Text>
+          </View>
+        )}
+      />
+    </View>
+  );
+};
 // export const CarouselComponentNewArrivals = () => {
 //   return (
 //     <View style={styles.container}>

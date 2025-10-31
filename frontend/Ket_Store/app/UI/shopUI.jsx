@@ -11,9 +11,9 @@ import { CarouselComponentCombs, CarouselComponentMirror, CarouselComponentPegs}
 export default function XSmallUI() {
   const renderCategory = (linking, title, item) => (
   <Link href={linking} asChild>
-    <TouchableOpacity style={xsmall.categoryContainer}>
-      <Text style={xsmall.categoryTitle}>{title}</Text>
-      <View style={xsmall.card}>
+    <TouchableOpacity style={small.categoryContainer}>
+      <Text style={small.categoryTitle}>{title}</Text>
+      <View style={small.card}>
         {item}
       </View>
     </TouchableOpacity>
@@ -22,12 +22,12 @@ export default function XSmallUI() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
-        <View style={xsmall.container}>
+        <View style={small.container}>
           {/* Header */}
           <XSmallUIheaderNav title="Shop" img="shopping-bag" />
           {/* Scrollable Content */}
           <ScrollView
-            contentContainerStyle={xsmall.contentContainer}
+            contentContainerStyle={small.contentContainer}
             showsVerticalScrollIndicator={false}
           >
             {renderCategory("/shopping/placeOrder", "Combs", <CarouselComponentCombs />)}
@@ -197,7 +197,7 @@ const XLargeUI = () => {
 };
 
 // Styles for the page
-const xsmall = StyleSheet.create({
+const small = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white"
@@ -258,63 +258,6 @@ const xsmall = StyleSheet.create({
     height: "100%",
     width: "100%",
     paddingTop: "30%",
-  },
-});
-const small = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-
-  contentContainer: {
-    padding: 20,
-    paddingBottom: hp(10),
-  },
-
-  categoryContainer: {
-    marginBottom: hp(10),
-    height: hp(35),
-  },
-
-  categoryTitle: {
-    fontSize: 25,
-    fontWeight: "bold",
-    color: "#8B0000",
-    marginBottom: 10,
-    alignSelf: "center",
-  },
-
-  card: {
-    backgroundColor: "green",
-    borderRadius: 10,
-    alignItems: "center",
-    height: "100%",
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-
-  button: {
-    backgroundColor: "#a6a056ff",
-    borderRadius: 20,
-    padding: 7,
-  },
-
-  buttonText: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
-    fontSize: 20,
-  },
-
-  activeNav: {
-    fontWeight: "bold",
-    textDecorationLine: "underline",
-  },
-
-  inner: {
-    borderRadius: 15,
-    height: "100%",
-    width: "48%",
-    paddingTop: "30%"
   },
 });
 const medium = StyleSheet.create({

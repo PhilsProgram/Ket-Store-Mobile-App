@@ -8,7 +8,7 @@ import SettingsHeader from "../navigations/settingshead.jsx"; // Importing the H
 export default function XSmallUIShop () {
     return (
         <SafeAreaView>
-            <ScrollView style={small.scrollView}>
+            <ScrollView style={small.scrollView} showsVerticalScrollIndicator={false} >
                 <SettingsHeader item="Explore Product"/>
                 <View style={small.placeholder}></View>
                 <View style={small.description}>
@@ -16,7 +16,6 @@ export default function XSmallUIShop () {
                     <Text style={small.subtitle}>This is the description part for the product to help customers read its use and make decisions especially for new products to try out</Text>
                     <TextInput placeholder="enter quantity" style={small.input} />
                     <View style={small.buttonContainer}>
-                    <TouchableOpacity style={small.button}>Cancel</TouchableOpacity>
                     <TouchableOpacity style={small.button}>Add</TouchableOpacity>
                     </View>
                 </View>
@@ -131,7 +130,7 @@ const small = StyleSheet.create({
         marginBottom: 5,
     },
     subtitle: {
-        fontSize: 16,
+        fontSize: 14,
         color: '#555',
     },
     combContainer: {
@@ -160,7 +159,7 @@ const small = StyleSheet.create({
     },
     buttonContainer: {
         position: "relative",
-        justifyContent: "space-between",
+        justifyContent: "center",
         borderColor: "red",
         height: 50,
         flexDirection: "row",
@@ -171,14 +170,13 @@ const small = StyleSheet.create({
     },
     button: {
         backgroundColor: "#9D2B27",
-        width: "45%",
-        borderRadius: 6,
+        width: "90%",
+        borderRadius: 10,
         justifyContent: "center",
         color: "white",
         alignItems: "center",
         fontWeight: "600",
         fontFamily: "sans-serif",
-        padding: 4,
     }
 })
 const medium = StyleSheet.create({
