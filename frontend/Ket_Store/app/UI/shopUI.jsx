@@ -30,9 +30,9 @@ export default function XSmallUI() {
             contentContainerStyle={small.contentContainer}
             showsVerticalScrollIndicator={false}
           >
-            {renderCategory("/shopping/placeOrder", "Combs", <CarouselComponentCombs />)}
-            {renderCategory("/shopping/placeOrder", "Pegs", <CarouselComponentPegs />)}
-            {renderCategory("/shopping/placeOrder", "Mirror", <CarouselComponentMirror />)}
+            {renderCategory("/shop/combs", "Combs", <CarouselComponentCombs />)}
+            {renderCategory("/shop/pegs", "Pegs", <CarouselComponentPegs />)}
+            {renderCategory("/shop/mirrors", "Mirror", <CarouselComponentMirror />)}
           </ScrollView>
           <FooterNav />
         </View>
@@ -159,17 +159,17 @@ const LargeUI = () => {
 const XLargeUI = () => {
   const renderCategory = (linking, title) => (
   <Link href={linking} asChild>
-    <TouchableOpacity style={xlarge.categoryContainer}>
-      <Text style={xlarge.categoryTitle}>{title}</Text>
-      <View style={xlarge.card}>
-        <View style={xlarge.inner}>
-          <Pressable style={xlarge.button}>
-            <Text style={xlarge.buttonText}>Buy</Text>
+    <TouchableOpacity style={large.categoryContainer}>
+      <Text style={large.categoryTitle}>{title}</Text>
+      <View style={large.card}>
+        <View style={large.inner}>
+          <Pressable style={large.button}>
+            <Text style={large.buttonText}>Buy</Text>
           </Pressable>
         </View>
-        <View style={xlarge.inner}>
-          <Pressable style={xlarge.button}>
-            <Text style={xlarge.buttonText}>Buy</Text>
+        <View style={large.inner}>
+          <Pressable style={large.button}>
+            <Text style={large.buttonText}>Buy</Text>
           </Pressable>
         </View>
       </View>
@@ -179,10 +179,10 @@ const XLargeUI = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
-        <View style={xlarge.container}>
+        <View style={large.container}>
           <XLargeUIHeaderNav title="Shop" img="shopping-bag" />
           <ScrollView
-            contentContainerStyle={xlarge.contentContainer}
+            contentContainerStyle={large.contentContainer}
             showsVerticalScrollIndicator={false}
           >
             {renderCategory("/shopping/combs", "Combs")}
@@ -205,7 +205,7 @@ const small = StyleSheet.create({
 
   contentContainer: {
     padding: 20,
-    paddingBottom: hp(10),
+    paddingBottom: hp(12),
   },
 
   categoryContainer: {
@@ -363,65 +363,6 @@ const large = StyleSheet.create({
     borderRadius: 15,
     height: hp(48),
     width: "100%",
-    backgroundColor: "#D3D3D3",
-  },
-});
-const xlarge = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingBottom: hp(10),
-  },
-  contentContainer: {
-    margin: hp(4),
-    marginBottom: hp(10),
-    justifyContent: "space-between",
-    height: hp(170),
-  },
-  categoryContainer: {
-    width: "100%"
-  },
-  card: {
-    width: "100%",
-    height: hp(48.5),
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignSelf: "center"
-
-  },
-  categoryTitle: {
-    fontSize: 30,
-    fontWeight: "bold",
-    color: "#8B0000",
-    margin: 10,
-    alignSelf: "center"
-  },
-  button: {
-    width: "30%",
-    height: "15%",
-    backgroundColor: "#a6a056ff",
-    borderRadius: 20,
-    padding: 7,
-    position: "absolute",
-    bottom: 10,
-    right: wp("2%"),
-    justifyContent: "center",
-  },
-  buttonText: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
-    fontSize: 20,
-  },
-  activeNav: {
-    fontWeight: "bold",
-    textDecorationLine: "underline",
-  },
-  inner: {
-    borderColor: "black",
-    borderWidth: 1,
-    borderRadius: 15,
-    height: hp(48),
-    width: "49%",
     backgroundColor: "#D3D3D3",
   },
 });
